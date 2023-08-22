@@ -3,7 +3,17 @@ guid: 24436e6855886ad4489ee82598cd143e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_metal
+    second: {fileID: 2100000, guid: cf7d97a229f978d43a05a28a64d4cc98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Crome_metal_vraytest_crome_metal
+    second: {fileID: 2100000, guid: a84a05c691e44f44f98b0f675c769f68, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
