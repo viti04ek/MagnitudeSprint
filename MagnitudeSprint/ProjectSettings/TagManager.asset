@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Obstacle
   - DeleteObstacle
+  - SteakLoot
+  - CarrotLoot
   layers:
   - Default
   - TransparentFX
