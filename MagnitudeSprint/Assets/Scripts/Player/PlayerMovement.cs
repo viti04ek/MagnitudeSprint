@@ -8,9 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _curTouchPos;
     public float MoveSpeed;
 
+
     private void Update()
     {
         DetectSwipe();
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.5f, 2.5f), transform.position.y, transform.position.z);
     }
 
     private void DetectSwipe()
