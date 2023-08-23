@@ -8,6 +8,10 @@ TagManager:
   - DeleteObstacle
   - SteakLoot
   - CarrotLoot
+  - Coin
+  - Barbell
+  - BarbellObstacle
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -350,6 +350,7 @@
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/Obstacle.cs"
+"Assets/Scripts/ObstacleSpawner.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
