@@ -20,17 +20,22 @@ public class PlayerManager : MonoBehaviour
         {
             int delta = -other.gameObject.GetComponent<Enemy>().Strength;
             ChangeStrength(delta);
+            other.gameObject.GetComponent<Enemy>().Fall();
         }
         else if (other.gameObject.CompareTag("BarbellObstacle") || other.gameObject.CompareTag("CarrotLoot"))
         {
             ChangeStrength(-1);
+            Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("SteakLoot"))
         {
             ChangeStrength(1);
+            Destroy(other.gameObject);
         }
-
-        Destroy(other.gameObject);
+        else if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 
 
