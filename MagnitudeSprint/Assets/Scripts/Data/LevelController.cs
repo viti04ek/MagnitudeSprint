@@ -140,6 +140,8 @@ public class LevelController : MonoBehaviour
             finish.Stop = true;
             finish.Speed = 0;
         }
+        var player = FindObjectOfType<PlayerMovement>();
+        player.enabled = false;
 
         UIController.Instance.PlayerLose();
     }
