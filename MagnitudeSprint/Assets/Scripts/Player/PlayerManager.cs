@@ -22,7 +22,8 @@ public class PlayerManager : MonoBehaviour
         {
             int delta = -other.gameObject.GetComponent<Enemy>().Strength;
             ChangeStrength(delta);
-            other.gameObject.GetComponent<Enemy>().Fall();
+            if (_strength > 0)
+                other.gameObject.GetComponent<Enemy>().Fall();
         }
         else if (other.gameObject.CompareTag("CarrotLoot"))
         {
@@ -33,7 +34,8 @@ public class PlayerManager : MonoBehaviour
         {
             ChangeStrength(-1);
             _currBarbell = other.gameObject;
-            SmashBarbell();
+            if (_strength > 0)
+                SmashBarbell();
         }
         else if (other.gameObject.CompareTag("SteakLoot"))
         {
@@ -53,9 +55,12 @@ public class PlayerManager : MonoBehaviour
         else if (other.gameObject.CompareTag("BarbellFinish"))
         {
             ChangeStrength(-1);
-            LevelController.Instance.StopFinishBarbell();
-            _currBarbell = other.gameObject;
-            Invoke("SmashBarbell", 0.7f);
+            if (_strength > 0)
+            {
+                LevelController.Instance.StopFinishBarbell();
+                _currBarbell = other.gameObject;
+                Invoke("SmashBarbell", 0.7f);
+            }
         }
     }
 
@@ -71,6 +76,9 @@ public class PlayerManager : MonoBehaviour
         _strength += delta;
         StrengthText.text = $"Strength: {_strength}";
         ChangePlayerScale(delta);
+
+        if (_strength < 1)
+            LevelController.Instance.PlayerLose();
     }
 
 

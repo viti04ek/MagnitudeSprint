@@ -122,4 +122,25 @@ public class LevelController : MonoBehaviour
         UIController.Instance.UnPause();
         Time.timeScale = 1;
     }
+
+
+    public void PlayerLose()
+    {
+        PlayerAnimation.Instance.Fall();
+        ObstacleSpawner.SetActive(false);
+
+        var obstacles = FindObjectsOfType<Obstacle>();
+        foreach (var obstacle in obstacles)
+        {
+            obstacle.Stop();
+        }
+        var finish = FindObjectOfType<FinishObstacle>();
+        if (finish != null)
+        {
+            finish.Stop = true;
+            finish.Speed = 0;
+        }
+
+        UIController.Instance.PlayerLose();
+    }
 }

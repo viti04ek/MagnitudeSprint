@@ -7,10 +7,13 @@ public class Obstacle : MonoBehaviour
     public float Speed;
     public Rigidbody Rigidbody;
 
+    private bool _stop = false;
+
 
     private void Update()
     {
-        Rigidbody.velocity = Vector3.back * Speed;
+        if (!_stop)
+            Rigidbody.velocity = Vector3.back * Speed;
     }
 
 
@@ -18,5 +21,12 @@ public class Obstacle : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DeleteObstacle"))
             Destroy(gameObject);
+    }
+
+
+    public void Stop()
+    {
+        _stop = true;
+        Rigidbody.velocity = Vector3.zero;
     }
 }

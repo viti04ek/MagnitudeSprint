@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     public Text CoinText;
 
     public GameObject PauseUI;
+    public GameObject PlayerLoseUI;
 
 
     private void Awake()
@@ -44,5 +45,11 @@ public class UIController : MonoBehaviour
     public void UnPause()
     {
         PauseUI.SetActive(false);
+    }
+
+    public void PlayerLose()
+    {
+        GameOnUI.SetActive(false);
+        PlayerLoseUI.SetActive(true);
     }
 }
