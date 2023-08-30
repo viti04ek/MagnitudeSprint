@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 2200995456165287803}
   - component: {fileID: 1358411654}
   - component: {fileID: 1358411655}
+  - component: {fileID: 2812822065738983408}
   m_Layer: 0
   m_Name: BarbellObstacle
   m_TagString: BarbellObstacle
@@ -341,6 +342,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2812822065738983408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2326444652605549753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85966bec6a3b5fb41ba10fee4d67739d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rigidbody: {fileID: 1358411655}
 --- !u!1 &3519895503823653012
 GameObject:
   m_ObjectHideFlags: 0
