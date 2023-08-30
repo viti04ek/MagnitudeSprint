@@ -23,6 +23,8 @@ public class LevelController : MonoBehaviour
 
     public int CoinCounter = 0;
 
+    private GameStatement _prevGameStatement;
+
 
     private void Awake()
     {
@@ -57,6 +59,12 @@ public class LevelController : MonoBehaviour
         {
 
         }
+    }
+
+
+    private void OnDisable()
+    {
+        Time.timeScale = 1;
     }
 
 
@@ -96,5 +104,22 @@ public class LevelController : MonoBehaviour
         FinishObstacle.Instance.Speed = 10;
         FinishObstacle.Instance.Stop = false;
         PlayerAnimation.Instance.Run();
+    }
+
+
+    public void Pause()
+    {
+        _prevGameStatement = GameStatement;
+        GameStatement = GameStatement.GamePaused;
+        UIController.Instance.Pause();
+        Time.timeScale = 0;
+    }
+
+
+    public void UnPause()
+    {
+        GameStatement = _prevGameStatement;
+        UIController.Instance.UnPause();
+        Time.timeScale = 1;
     }
 }

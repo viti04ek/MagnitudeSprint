@@ -8,9 +8,11 @@ public class UIController : MonoBehaviour
     public static UIController Instance;
 
     public GameObject GameOnUI;
-    public GameObject StartButton;
+    public GameObject PreStartUI;
 
     public Text CoinText;
+
+    public GameObject PauseUI;
 
 
     private void Awake()
@@ -22,7 +24,7 @@ public class UIController : MonoBehaviour
 
     public void StartGame()
     {
-        StartButton.SetActive(false);
+        PreStartUI.SetActive(false);
         GameOnUI.SetActive(true);
     }
 
@@ -30,5 +32,17 @@ public class UIController : MonoBehaviour
     public void UpdateCoinText(int coin)
     {
         CoinText.text = coin.ToString();
+    }
+
+
+    public void Pause()
+    {
+        PauseUI.SetActive(true);
+    }
+
+
+    public void UnPause()
+    {
+        PauseUI.SetActive(false);
     }
 }
