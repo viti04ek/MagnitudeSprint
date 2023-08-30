@@ -38,6 +38,7 @@ public class PlayerManager : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Coin"))
         {
+            LevelController.Instance.AddCoin();
             Destroy(other.gameObject);
         }
     }

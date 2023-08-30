@@ -7,8 +7,10 @@ public class UIController : MonoBehaviour
 {
     public static UIController Instance;
 
-    public GameObject PlayerStrength;
+    public GameObject GameOnUI;
     public GameObject StartButton;
+
+    public Text CoinText;
 
 
     private void Awake()
@@ -21,6 +23,12 @@ public class UIController : MonoBehaviour
     public void StartGame()
     {
         StartButton.SetActive(false);
-        PlayerStrength.SetActive(true);
+        GameOnUI.SetActive(true);
+    }
+
+
+    public void UpdateCoinText(int coin)
+    {
+        CoinText.text = coin.ToString();
     }
 }

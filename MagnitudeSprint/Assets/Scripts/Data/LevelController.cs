@@ -21,6 +21,8 @@ public class LevelController : MonoBehaviour
     public GameStatement GameStatement;
     public GameObject ObstacleSpawner;
 
+    public int CoinCounter = 0;
+
 
     private void Awake()
     {
@@ -64,5 +66,12 @@ public class LevelController : MonoBehaviour
         UIController.Instance.StartGame();
         ObstacleSpawner.SetActive(true);
         PlayerAnimation.Instance.Run();
+    }
+
+
+    public void AddCoin()
+    {
+        CoinCounter++;
+        UIController.Instance.UpdateCoinText(CoinCounter);
     }
 }
