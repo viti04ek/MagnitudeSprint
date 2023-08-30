@@ -10,6 +10,8 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject SteakLoot;
     public GameObject CarrotLoot;
 
+    public GameObject FinishBarbells;
+
     private int _maxPossibleStrenght = 1;
 
 
@@ -21,16 +23,23 @@ public class ObstacleSpawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        for (int i = 0; i < 40; i++)
+        for (int i = 0; i < 41; i++)
         {
-            int rand = Random.Range(1, 6);
-            switch (rand)
+            if (i < 40)
             {
-                case 1: SpawnOneEnemy(); break;
-                case 2: SpawnRowEnemies(); break;
-                case 3: SpawnBarbell(); break;
-                case 4: SpawnLoot(); break;
-                case 5: SpawnCoin(); break;
+                int rand = Random.Range(1, 6);
+                switch (rand)
+                {
+                    case 1: SpawnOneEnemy(); break;
+                    case 2: SpawnRowEnemies(); break;
+                    case 3: SpawnBarbell(); break;
+                    case 4: SpawnLoot(); break;
+                    case 5: SpawnCoin(); break;
+                }
+            }
+            else
+            {
+                Instantiate(FinishBarbells, new Vector3(transform.position.x, 0.36f, transform.position.z), Quaternion.identity);
             }
 
             float randTime = Random.Range(0.5f, 0.9f);

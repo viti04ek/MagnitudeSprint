@@ -74,4 +74,27 @@ public class LevelController : MonoBehaviour
         CoinCounter++;
         UIController.Instance.UpdateCoinText(CoinCounter);
     }
+
+
+    public void OnFinish()
+    {
+        GameStatement = GameStatement.FinalPart;
+    }
+
+
+    public void StopFinishBarbell()
+    {
+        FinishObstacle.Instance.Speed = 0;
+        FinishObstacle.Instance.Stop = true;
+        PlayerAnimation.Instance.Smash();
+        Invoke("ContinueFinishBarbell", 2.1f);
+    }
+
+
+    public void ContinueFinishBarbell()
+    {
+        FinishObstacle.Instance.Speed = 10;
+        FinishObstacle.Instance.Stop = false;
+        PlayerAnimation.Instance.Run();
+    }
 }

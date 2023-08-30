@@ -12,6 +12,7 @@ TagManager:
   - Barbell
   - BarbellObstacle
   - Enemy
+  - BarbellFinish
   layers:
   - Default
   - TransparentFX

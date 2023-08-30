@@ -7,14 +7,14 @@ public class Barbell : MonoBehaviour
     public Rigidbody Rigidbody;
 
 
-    private void OnTriggerEnter(Collider other)
+    public void Slap()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            GetComponent<Obstacle>().enabled = false;
-            Rigidbody.AddForce(Vector3.left * 1000);
-            Invoke("DestroyMe", 2f);
-        }
+        Obstacle obstacle = GetComponent<Obstacle>();
+        if (obstacle != null)
+            obstacle.enabled = false;
+
+        Rigidbody.AddForce(Vector3.left * 1000);
+        Invoke("DestroyMe", 2f);
     }
 
 

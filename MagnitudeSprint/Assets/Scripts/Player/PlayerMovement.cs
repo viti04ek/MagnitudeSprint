@@ -7,12 +7,20 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _prevTouchPos;
     private Vector3 _curTouchPos;
     public float MoveSpeed;
+    public bool Move = true;
 
 
     private void Update()
     {
-        DetectSwipe();
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.5f, 2.5f), transform.position.y, transform.position.z);
+        if (Move)
+        {
+            DetectSwipe();
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.5f, 2.5f), transform.position.y, transform.position.z);
+        }
+        else
+        {
+            StopMove();
+        }
     }
 
     private void DetectSwipe()
@@ -28,5 +36,11 @@ public class PlayerMovement : MonoBehaviour
 
             transform.Translate(Vector3.right * (_curTouchPos.x - _prevTouchPos.x) * MoveSpeed * Time.deltaTime);
         }
+    }
+
+
+    private void StopMove()
+    {
+        transform.position = Vector3.Lerp(transform.position, Vector3.zero, 0.1f);
     }
 }

@@ -13,6 +13,8 @@ public class PlayerManager : MonoBehaviour
     public Text StrengthText;
     private int _strength = 1;
 
+    private GameObject _currBarbell;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,6 +32,8 @@ public class PlayerManager : MonoBehaviour
         else if (other.gameObject.CompareTag("BarbellObstacle"))
         {
             ChangeStrength(-1);
+            _currBarbell = other.gameObject;
+            SmashBarbell();
         }
         else if (other.gameObject.CompareTag("SteakLoot"))
         {
@@ -41,6 +45,24 @@ public class PlayerManager : MonoBehaviour
             LevelController.Instance.AddCoin();
             Destroy(other.gameObject);
         }
+        else if (other.gameObject.CompareTag("Finish"))
+        {
+            LevelController.Instance.OnFinish();
+            gameObject.GetComponent<PlayerMovement>().Move = false;
+        }
+        else if (other.gameObject.CompareTag("BarbellFinish"))
+        {
+            ChangeStrength(-1);
+            LevelController.Instance.StopFinishBarbell();
+            _currBarbell = other.gameObject;
+            Invoke("SmashBarbell", 0.7f);
+        }
+    }
+
+
+    private void SmashBarbell()
+    {
+        _currBarbell.GetComponent<Barbell>().Slap();
     }
 
 

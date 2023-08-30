@@ -353,6 +353,7 @@
 "Assets/Scripts/Data/LevelController.cs"
 "Assets/Scripts/Obstacles/Barbell.cs"
 "Assets/Scripts/Obstacles/Enemy.cs"
+"Assets/Scripts/Obstacles/FinishObstacle.cs"
 "Assets/Scripts/Obstacles/Obstacle.cs"
 "Assets/Scripts/Obstacles/ObstacleSpawner.cs"
 "Assets/Scripts/Player/PlayerAnimation.cs"
