@@ -78,7 +78,12 @@ public class PlayerManager : MonoBehaviour
         ChangePlayerScale(delta);
 
         if (_strength < 1)
-            LevelController.Instance.PlayerLose();
+        {
+            if (LevelController.Instance.GameStatement == GameStatement.GameOn)
+                LevelController.Instance.PlayerLose();
+            else
+                LevelController.Instance.GameOver();
+        }
     }
 
 

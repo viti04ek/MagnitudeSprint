@@ -22,6 +22,7 @@ public class LevelController : MonoBehaviour
     public GameObject ObstacleSpawner;
 
     public int CoinCounter = 0;
+    public int XCounter = 1;
 
     private GameStatement _prevGameStatement;
 
@@ -95,6 +96,7 @@ public class LevelController : MonoBehaviour
         FinishObstacle.Instance.Speed = 0;
         FinishObstacle.Instance.Stop = true;
         PlayerAnimation.Instance.Smash();
+        Invoke("AddX", 0.7f);
         Invoke("ContinueFinishBarbell", 2.1f);
     }
 
@@ -104,6 +106,13 @@ public class LevelController : MonoBehaviour
         FinishObstacle.Instance.Speed = 10;
         FinishObstacle.Instance.Stop = false;
         PlayerAnimation.Instance.Run();
+    }
+
+
+    public void AddX()
+    {
+        XCounter++;
+        UIController.Instance.SetXText(XCounter);
     }
 
 
@@ -126,6 +135,8 @@ public class LevelController : MonoBehaviour
 
     public void PlayerLose()
     {
+        _prevGameStatement = GameStatement;
+        GameStatement = GameStatement.PlayerLose;
         PlayerAnimation.Instance.Fall();
         ObstacleSpawner.SetActive(false);
 
@@ -144,5 +155,16 @@ public class LevelController : MonoBehaviour
         player.enabled = false;
 
         UIController.Instance.PlayerLose();
+    }
+
+
+    public void GameOver()
+    {
+        _prevGameStatement = GameStatement;
+        GameStatement = GameStatement.GameOver;
+        PlayerAnimation.Instance.Fall();
+        ObstacleSpawner.SetActive(false);
+        UIController.Instance.GameOver();
+        CoinCounter *= XCounter;
     }
 }

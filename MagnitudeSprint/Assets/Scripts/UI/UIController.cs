@@ -15,6 +15,10 @@ public class UIController : MonoBehaviour
     public GameObject PauseUI;
     public GameObject PlayerLoseUI;
 
+    public Text XText;
+
+    public GameObject GameOverUI;
+
 
     private void Awake()
     {
@@ -51,5 +55,18 @@ public class UIController : MonoBehaviour
     {
         GameOnUI.SetActive(false);
         PlayerLoseUI.SetActive(true);
+    }
+
+
+    public void SetXText(int x)
+    {
+        XText.text = $"X{x}";
+    }
+
+
+    public void GameOver()
+    {
+        GameOnUI.SetActive(false);
+        GameOverUI.SetActive(true);
     }
 }
