@@ -18,6 +18,9 @@ public class UIController : MonoBehaviour
     public Text XText;
 
     public GameObject GameOverUI;
+    public Text FinishCoinsText;
+    public Text AdsText;
+    public Text ClaimText;
 
 
     private void Awake()
@@ -64,9 +67,13 @@ public class UIController : MonoBehaviour
     }
 
 
-    public void GameOver()
+    public void GameOver(int coins, int x)
     {
         GameOnUI.SetActive(false);
         GameOverUI.SetActive(true);
+
+        FinishCoinsText.text = $"{coins / x} X{x}";
+        AdsText.text = $"Claim {coins * 3}";
+        ClaimText.text = $"Claim {coins}";
     }
 }

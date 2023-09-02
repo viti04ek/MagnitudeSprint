@@ -164,7 +164,17 @@ public class LevelController : MonoBehaviour
         GameStatement = GameStatement.GameOver;
         PlayerAnimation.Instance.Fall();
         ObstacleSpawner.SetActive(false);
-        UIController.Instance.GameOver();
+
+        var finish = FindObjectOfType<FinishObstacle>();
+        if (finish != null)
+        {
+            finish.Stop = true;
+            finish.Speed = 0;
+        }
+        var player = FindObjectOfType<PlayerMovement>();
+        player.enabled = false;
+
         CoinCounter *= XCounter;
+        UIController.Instance.GameOver(CoinCounter, XCounter);
     }
 }
