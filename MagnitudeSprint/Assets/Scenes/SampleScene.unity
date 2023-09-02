@@ -6580,7 +6580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40e2dee1b64f6240a9dc0c5e2e95267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 0.55
+  MoveSpeed: 0.15
   Move: 1
 --- !u!65 &4515641690478014508
 BoxCollider:
