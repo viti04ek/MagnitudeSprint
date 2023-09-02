@@ -22,6 +22,8 @@ public class UIController : MonoBehaviour
     public Text AdsText;
     public Text ClaimText;
 
+    public Text LvlText;
+
 
     private void Awake()
     {
@@ -75,5 +77,11 @@ public class UIController : MonoBehaviour
         FinishCoinsText.text = $"{coins / x} X{x}";
         AdsText.text = $"Claim {coins * 3}";
         ClaimText.text = $"Claim {coins}";
+    }
+
+
+    public void UpdateLvl(int lvl)
+    {
+        LvlText.text = $"Level: {lvl}";
     }
 }

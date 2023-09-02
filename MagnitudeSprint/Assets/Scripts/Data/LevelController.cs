@@ -24,6 +24,8 @@ public class LevelController : MonoBehaviour
     public int CoinCounter = 0;
     public int XCounter = 1;
 
+    public int LvlCounter = 1;
+
     private GameStatement _prevGameStatement;
 
 
@@ -31,6 +33,12 @@ public class LevelController : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+    }
+
+
+    private void Start()
+    {
+        UIController.Instance.UpdateLvl(LvlCounter);
     }
 
 
