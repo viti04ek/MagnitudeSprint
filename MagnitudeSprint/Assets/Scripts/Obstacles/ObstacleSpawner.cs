@@ -8,11 +8,11 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject BarbellObstacle;
     public GameObject Coin;
     public GameObject SteakLoot;
-    public GameObject CarrotLoot;
 
     public GameObject FinishBarbells;
 
     private int _maxPossibleStrenght = 1;
+    private int _prevObstacle = 0;
 
 
     private void OnEnable()
@@ -36,13 +36,14 @@ public class ObstacleSpawner : MonoBehaviour
                     case 4: SpawnLoot(); break;
                     case 5: SpawnCoin(); break;
                 }
+                _prevObstacle = rand;
             }
             else
             {
                 Instantiate(FinishBarbells, new Vector3(transform.position.x, 0.36f, transform.position.z), Quaternion.identity);
             }
 
-            float randTime = Random.Range(0.5f, 0.9f);
+            float randTime = Random.Range(0.8f, 1.1f);
             yield return new WaitForSeconds(randTime);
         }
     }
@@ -61,6 +62,13 @@ public class ObstacleSpawner : MonoBehaviour
         if (_maxPossibleStrenght < 2)
         {
             SpawnLoot();
+            return;
+        }
+
+        if (_prevObstacle == 2)
+        {
+            SpawnBarbell();
+            _prevObstacle = 3;
             return;
         }
 
@@ -97,19 +105,8 @@ public class ObstacleSpawner : MonoBehaviour
             return;
         }
 
-        int rand = Random.Range(0, 2);
-        float randCoord1 = Random.Range(-2.5f, -0.5f);
-        float randCoord2 = Random.Range(0.5f, 2.5f);
-        if (rand == 0)
-        {
-            Instantiate(CarrotLoot, new Vector3(randCoord1, 0.5f, transform.position.z), Quaternion.identity);
-            Instantiate(SteakLoot, new Vector3(randCoord2, 0.5f, transform.position.z), Quaternion.identity);
-        }
-        else
-        {
-            Instantiate(CarrotLoot, new Vector3(randCoord2, 0.5f, transform.position.z), Quaternion.identity);
-            Instantiate(SteakLoot, new Vector3(randCoord1, 0.5f, transform.position.z), Quaternion.identity);
-        }
+        float randCoord = Random.Range(-2.5f, 2.5f);
+        Instantiate(SteakLoot, new Vector3(randCoord, 0.5f, transform.position.z), Quaternion.identity);
 
         _maxPossibleStrenght++;
     }

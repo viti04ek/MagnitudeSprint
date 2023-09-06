@@ -2583,7 +2583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.13997222, y: -0, z: -0, w: 0.9901554}
-  m_LocalPosition: {x: 0, y: 2.73, z: -4.36}
+  m_LocalPosition: {x: 0, y: 3.76, z: -5.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4587,7 +4587,6 @@ MonoBehaviour:
   BarbellObstacle: {fileID: 2326444652605549753, guid: b3e056360c7736b468956ea7d2723697, type: 3}
   Coin: {fileID: 2238187738734798450, guid: a2883b5fd30755f41a32cb1e67ab5d1f, type: 3}
   SteakLoot: {fileID: 7733939880490148548, guid: d4db3291ea2d38d4a8189b33af92c159, type: 3}
-  CarrotLoot: {fileID: 3300245116387882658, guid: 5a652e9949882804495489de1cd7a4e0, type: 3}
   FinishBarbells: {fileID: 2058959559875776029, guid: a97546e49cebe8143a6db8577709c346, type: 3}
 --- !u!4 &2077591086
 Transform:
@@ -4919,7 +4918,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ReferenceResolution: {x: 1080, y: 2340}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3

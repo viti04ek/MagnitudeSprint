@@ -25,11 +25,6 @@ public class PlayerManager : MonoBehaviour
             if (_strength > 0)
                 other.gameObject.GetComponent<Enemy>().Fall();
         }
-        else if (other.gameObject.CompareTag("CarrotLoot"))
-        {
-            ChangeStrength(-1);
-            Destroy(other.gameObject);
-        }
         else if (other.gameObject.CompareTag("BarbellObstacle"))
         {
             ChangeStrength(-1);
@@ -81,7 +76,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (LevelController.Instance.GameStatement == GameStatement.GameOn)
                 LevelController.Instance.PlayerLose();
-            else
+            else if (LevelController.Instance.GameStatement == GameStatement.FinalPart)
                 LevelController.Instance.GameOver();
         }
     }
