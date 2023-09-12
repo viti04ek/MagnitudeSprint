@@ -83,6 +83,9 @@ public class LevelController : MonoBehaviour
         UIController.Instance.StartGame();
         ObstacleSpawner.SetActive(true);
         PlayerAnimation.Instance.Run();
+
+        var player = FindObjectOfType<PlayerMovement>();
+        player.enabled = true;
     }
 
 
