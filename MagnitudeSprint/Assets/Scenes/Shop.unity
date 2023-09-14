@@ -1128,6 +1128,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221544082}
   m_CullTransparentMesh: 1
+--- !u!1 &226541168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226541170}
+  - component: {fileID: 226541169}
+  m_Layer: 0
+  m_Name: ShopController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &226541169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226541168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8172ed0a9644740bd33ac86fb1e079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkinPanel: {fileID: 356823411}
+  HatPanel: {fileID: 1542309422}
+  SkinBtn: {fileID: 769921281}
+  HatBtn: {fileID: 713048949}
+  PressedBtn: {fileID: -1241994753, guid: 9d3d25f1a5cac464daf2ce20eb2a7be7, type: 3}
+  UnpressedBtn: {fileID: -1417123669, guid: 9d3d25f1a5cac464daf2ce20eb2a7be7, type: 3}
+--- !u!4 &226541170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226541168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 232.5517, y: 1622.2511, z: -1519.1792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &253033794
 GameObject:
   m_ObjectHideFlags: 0
@@ -3578,7 +3628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -540, y: -0.00012207031}
+  m_AnchoredPosition: {x: -540, y: -0.00024414062}
   m_SizeDelta: {x: 1080, y: 1775}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &708049577
@@ -3715,7 +3765,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 713048952}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 226541169}
+        m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
+        m_MethodName: ShowHat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &713048952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4355,7 +4417,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 769921284}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 226541169}
+        m_TargetAssemblyTypeName: ShopController, Assembly-CSharp
+        m_MethodName: ShowSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &769921284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10732,7 +10806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -540, y: -0.00012207031}
+  m_AnchoredPosition: {x: -540, y: -0.00024414062}
   m_SizeDelta: {x: 1080, y: 1775}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2019083970
