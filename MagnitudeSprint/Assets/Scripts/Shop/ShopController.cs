@@ -13,6 +13,9 @@ public class ShopController : MonoBehaviour
     public Sprite PressedBtn;
     public Sprite UnpressedBtn;
 
+    public GameObject BuyMenu;
+    public int BuyItemID = -1;
+
 
     public void ShowSkin()
     {
@@ -29,5 +32,19 @@ public class ShopController : MonoBehaviour
         HatPanel.GetComponent<RectTransform>().DOAnchorPosX(0, 0.7f, false);
         HatBtn.GetComponent<Image>().sprite = PressedBtn;
         SkinBtn.GetComponent<Image>().sprite = UnpressedBtn;
+    }
+
+
+    public void ShowBuyMenu(int id)
+    {
+        BuyMenu.SetActive(true);
+        BuyItemID = id;
+    }
+
+
+    public void HideBuyMenu()
+    {
+        BuyMenu.SetActive(false);
+        BuyItemID = -1;
     }
 }
