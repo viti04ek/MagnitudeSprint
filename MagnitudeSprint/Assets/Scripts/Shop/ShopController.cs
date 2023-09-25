@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ShopController : MonoBehaviour
 {
+    public static ShopController Instance;
+
     public GameObject SkinPanel;
     public GameObject HatPanel;
     public GameObject SkinBtn;
@@ -14,7 +16,18 @@ public class ShopController : MonoBehaviour
     public Sprite UnpressedBtn;
 
     public GameObject BuyMenu;
+    public Text PriceText;
     public int BuyItemID = -1;
+    public bool IsItemSkin;
+
+    public GameObject NoMoneyMenu;
+
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
 
 
     public void ShowSkin()
@@ -35,10 +48,9 @@ public class ShopController : MonoBehaviour
     }
 
 
-    public void ShowBuyMenu(int id)
+    public void ShowBuyMenu()
     {
         BuyMenu.SetActive(true);
-        BuyItemID = id;
     }
 
 
@@ -46,5 +58,40 @@ public class ShopController : MonoBehaviour
     {
         BuyMenu.SetActive(false);
         BuyItemID = -1;
+    }
+
+
+    public void ShowNoMoneyMenu()
+    {
+        NoMoneyMenu.SetActive(true);
+    }
+
+
+    public void HideNoMoneyMenu()
+    {
+        NoMoneyMenu.SetActive(false);
+        BuyItemID = -1;
+    }
+
+
+    public void TryToBuy(int id, bool isSkin)
+    {
+        BuyItemID = id;
+        IsItemSkin = isSkin;
+        if (DataController.Instance.GameData.CoinCounter >= DataController.Instance.GameData.SkinsData[BuyItemID].Price)
+        {
+            PriceText.text = DataController.Instance.GameData.SkinsData[BuyItemID].Price.ToString();
+            ShowBuyMenu();
+        }
+        else
+        {
+            ShowNoMoneyMenu();
+        }
+    }
+
+
+    public void Buy()
+    {
+
     }
 }

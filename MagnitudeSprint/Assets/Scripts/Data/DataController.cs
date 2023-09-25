@@ -14,6 +14,9 @@ public class DataController : MonoBehaviour
     private string _dataFilePath;
     public bool DevMode;
 
+    public Material PlayerMaterial;
+    public GameObject PlayerHat;
+
 
     private void Awake()
     {
@@ -104,5 +107,17 @@ public class DataController : MonoBehaviour
         BinaryFormatter.Serialize(fileStream, GameData);
         fileStream.Close();
         Debug.Log("Data saved");
+    }
+
+
+    public bool IsSkinUnlocked(int id)
+    {
+        return GameData.SkinsData[id].IsUnlocked;
+    }
+
+
+    public bool IsSkinSelected(int id)
+    {
+        return GameData.SkinsData[id].IsSelected;
     }
 }
