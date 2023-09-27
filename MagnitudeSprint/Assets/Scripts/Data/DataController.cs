@@ -41,7 +41,7 @@ public class DataController : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < GameData.SkinsData.Length; i++)
+        /*for (int i = 0; i < GameData.SkinsData.Length; i++)
         {
             if (GameData.SkinsData[i].IsSelected == true)
             {
@@ -57,7 +57,7 @@ public class DataController : MonoBehaviour
                 PlayerHat = Prefabs[i];
                 break;
             }
-        }
+        }*/
     }
 
 
@@ -76,6 +76,24 @@ public class DataController : MonoBehaviour
     private void OnEnable()
     {
         CheckDB();
+
+        for (int i = 0; i < GameData.SkinsData.Length; i++)
+        {
+            if (GameData.SkinsData[i].IsSelected == true)
+            {
+                PlayerMaterial = Materials[i];
+                break;
+            }
+        }
+
+        for (int i = 0; i < GameData.HatsData.Length; i++)
+        {
+            if (GameData.HatsData[i].IsSelected == true)
+            {
+                PlayerHat = Prefabs[i];
+                break;
+            }
+        }
     }
 
 

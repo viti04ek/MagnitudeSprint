@@ -2565,6 +2565,7 @@ MonoBehaviour:
   ObstacleSpawner: {fileID: 2077591084}
   CoinCounter: 0
   XCounter: 1
+  PlayerMesh: {fileID: 6863048291775264290}
 --- !u!4 &947675261
 Transform:
   m_ObjectHideFlags: 0
