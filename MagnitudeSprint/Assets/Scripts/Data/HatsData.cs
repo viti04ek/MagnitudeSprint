@@ -10,5 +10,4 @@ public class HatsData
     public bool IsUnlocked;
     public bool IsSelected;
     public int Price;
-    public GameObject Prefab;
 }

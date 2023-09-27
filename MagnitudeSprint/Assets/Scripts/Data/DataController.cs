@@ -8,6 +8,9 @@ public class DataController : MonoBehaviour
 {
     public static DataController Instance = null;
 
+    public Material[] Materials;
+    public GameObject[] Prefabs;
+
     public GameData GameData;
 
     private BinaryFormatter BinaryFormatter;
@@ -38,20 +41,20 @@ public class DataController : MonoBehaviour
 
     private void Start()
     {
-        foreach (var skin in GameData.SkinsData)
+        for (int i = 0; i < GameData.SkinsData.Length; i++)
         {
-            if (skin.IsSelected == true)
+            if (GameData.SkinsData[i].IsSelected == true)
             {
-                PlayerMaterial = skin.Material;
+                PlayerMaterial = Materials[i];
                 break;
             }
         }
 
-        foreach (var hat in GameData.HatsData)
+        for (int i = 0; i < GameData.HatsData.Length; i++)
         {
-            if (hat.IsSelected == true)
+            if (GameData.HatsData[i].IsSelected == true)
             {
-                PlayerHat = hat.Prefab;
+                PlayerHat = Prefabs[i];
                 break;
             }
         }
@@ -160,6 +163,7 @@ public class DataController : MonoBehaviour
     {
         GameData.CoinCounter -= GameData.SkinsData[id].Price;
         GameData.SkinsData[id].IsUnlocked = true;
+        ShopController.Instance.UpdateCoinText();
     }
 
 
@@ -167,6 +171,7 @@ public class DataController : MonoBehaviour
     {
         GameData.CoinCounter -= GameData.HatsData[id].Price;
         GameData.HatsData[id].IsUnlocked = true;
+        ShopController.Instance.UpdateCoinText();
     }
 
 
@@ -178,7 +183,7 @@ public class DataController : MonoBehaviour
         }
 
         GameData.SkinsData[id].IsSelected = true;
-        PlayerMaterial = GameData.SkinsData[id].Material;
+        PlayerMaterial = Materials[id];
     }
 
 
@@ -190,7 +195,7 @@ public class DataController : MonoBehaviour
         }
 
         GameData.HatsData[id].IsSelected = true;
-        PlayerHat = GameData.HatsData[id].Prefab;
+        PlayerHat = Prefabs[id];
     }
 
 

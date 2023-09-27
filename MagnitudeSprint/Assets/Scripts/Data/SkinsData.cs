@@ -10,5 +10,4 @@ public class SkinsData
     public bool IsUnlocked;
     public bool IsSelected;
     public int Price;
-    public Material Material;
 }

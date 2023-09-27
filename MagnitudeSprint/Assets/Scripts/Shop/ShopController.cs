@@ -22,11 +22,25 @@ public class ShopController : MonoBehaviour
 
     public GameObject NoMoneyMenu;
 
+    public Text CoinText;
+
 
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
+    }
+
+
+    private void Start()
+    {
+        UpdateCoinText();
+    }
+
+
+    public void UpdateCoinText()
+    {
+        CoinText.text = DataController.Instance.GameData.CoinCounter.ToString();
     }
 
 
@@ -94,5 +108,9 @@ public class ShopController : MonoBehaviour
     {
         if (IsItemSkin)
             DataController.Instance.BuySkin(BuyItemID);
+        else
+            DataController.Instance.BuyHat(BuyItemID);
+
+        HideBuyMenu();
     }
 }

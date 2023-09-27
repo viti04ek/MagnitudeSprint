@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SkinItemButton : MonoBehaviour
+public class ItemButton : MonoBehaviour
 {
     public int ID;
     public GameObject Tick;
     public Sprite UnlockedSprite;
     public Image Image;
     public Text Text;
-    public string Name;
     public bool IsSkin;
 
     private bool _isUnlocked;
@@ -33,7 +32,7 @@ public class SkinItemButton : MonoBehaviour
         if (_isUnlocked)
         {
             Image.sprite = UnlockedSprite;
-            Text.text = Name;
+            Text.text = gameObject.name;
         }
 
         if (_isSelected)
@@ -51,7 +50,7 @@ public class SkinItemButton : MonoBehaviour
             {
                 _isUnlocked = DataController.Instance.IsSkinUnlocked(ID);
                 Image.sprite = UnlockedSprite;
-                Text.text = Name;
+                Text.text = gameObject.name;
             }
 
             if (DataController.Instance.IsSkinSelected(ID) && !_isSelected)
@@ -72,7 +71,7 @@ public class SkinItemButton : MonoBehaviour
             {
                 _isUnlocked = DataController.Instance.IsHatUnlocked(ID);
                 Image.sprite = UnlockedSprite;
-                Text.text = Name;
+                Text.text = gameObject.name;
             }
 
             if (DataController.Instance.IsHatSelected(ID) && !_isSelected)
@@ -99,7 +98,16 @@ public class SkinItemButton : MonoBehaviour
         else if (!_isSelected)
         {
             Tick.SetActive(true);
-            // дописать
+
+            if (IsSkin)
+                DataController.Instance.SelectSkin(ID);
+            else
+                DataController.Instance.SelectHat(ID);
+        }
+        else if (_isSelected && !IsSkin)
+        {
+            Tick.SetActive(false);
+            DataController.Instance.UnselectHat(ID);
         }
     }
 }
