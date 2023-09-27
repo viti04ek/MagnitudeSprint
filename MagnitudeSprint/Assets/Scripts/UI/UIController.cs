@@ -23,12 +23,20 @@ public class UIController : MonoBehaviour
     public Text ClaimText;
 
     public Text LvlText;
+    public Text StartCoinCounter;
 
 
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
+    }
+
+
+    private void Start()
+    {
+        LvlText.text = $"Level: {DataController.Instance.GameData.LevelCounter}";
+        StartCoinCounter.text = DataController.Instance.GameData.CoinCounter.ToString();
     }
 
 
@@ -77,11 +85,5 @@ public class UIController : MonoBehaviour
         FinishCoinsText.text = $"{coins / x} X{x}";
         AdsText.text = $"Claim {coins * 3}";
         ClaimText.text = $"Claim {coins}";
-    }
-
-
-    public void UpdateLvl(int lvl)
-    {
-        LvlText.text = $"Level: {lvl}";
     }
 }
