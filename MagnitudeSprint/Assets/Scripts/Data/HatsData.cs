@@ -8,7 +8,7 @@ using System;
 public class HatsData
 {
     public bool IsUnlocked;
-    public bool IsChecked;
+    public bool IsSelected;
     public int Price;
     public GameObject Prefab;
 }

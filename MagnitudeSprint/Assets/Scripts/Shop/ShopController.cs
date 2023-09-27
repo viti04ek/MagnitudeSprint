@@ -92,6 +92,7 @@ public class ShopController : MonoBehaviour
 
     public void Buy()
     {
-
+        if (IsItemSkin)
+            DataController.Instance.BuySkin(BuyItemID);
     }
 }

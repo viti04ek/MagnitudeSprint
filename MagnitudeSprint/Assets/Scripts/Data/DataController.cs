@@ -36,6 +36,28 @@ public class DataController : MonoBehaviour
     }
 
 
+    private void Start()
+    {
+        foreach (var skin in GameData.SkinsData)
+        {
+            if (skin.IsSelected == true)
+            {
+                PlayerMaterial = skin.Material;
+                break;
+            }
+        }
+
+        foreach (var hat in GameData.HatsData)
+        {
+            if (hat.IsSelected == true)
+            {
+                PlayerHat = hat.Prefab;
+                break;
+            }
+        }
+    }
+
+
     public void RefreshData()
     {
         if (File.Exists(_dataFilePath))
@@ -116,8 +138,65 @@ public class DataController : MonoBehaviour
     }
 
 
+    public bool IsHatUnlocked(int id)
+    {
+        return GameData.HatsData[id].IsUnlocked;
+    }
+
+
     public bool IsSkinSelected(int id)
     {
         return GameData.SkinsData[id].IsSelected;
+    }
+
+
+    public bool IsHatSelected(int id)
+    {
+        return GameData.HatsData[id].IsSelected;
+    }
+
+
+    public void BuySkin(int id)
+    {
+        GameData.CoinCounter -= GameData.SkinsData[id].Price;
+        GameData.SkinsData[id].IsUnlocked = true;
+    }
+
+
+    public void BuyHat(int id)
+    {
+        GameData.CoinCounter -= GameData.HatsData[id].Price;
+        GameData.HatsData[id].IsUnlocked = true;
+    }
+
+
+    public void SelectSkin(int id)
+    {
+        foreach (var skin in GameData.SkinsData)
+        {
+            skin.IsSelected = false;
+        }
+
+        GameData.SkinsData[id].IsSelected = true;
+        PlayerMaterial = GameData.SkinsData[id].Material;
+    }
+
+
+    public void SelectHat(int id)
+    {
+        foreach (var hat in GameData.HatsData)
+        {
+            hat.IsSelected = false;
+        }
+
+        GameData.HatsData[id].IsSelected = true;
+        PlayerHat = GameData.HatsData[id].Prefab;
+    }
+
+
+    public void UnselectHat(int id)
+    {
+        GameData.HatsData[id].IsSelected = false;
+        PlayerHat = null;
     }
 }
