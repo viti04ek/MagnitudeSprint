@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 
 public enum GameStatement
@@ -26,7 +27,13 @@ public class LevelController : MonoBehaviour
 
     public GameObject PlayerMesh;
 
+    public LevelEnvironment[] LevelEnvironments;
+    public GameObject Floor;
+    public int LastEnvironment;
+    public int CurrentEnvironment;
+
     private GameStatement _prevGameStatement;
+    private bool _isLvlComplete = false;
 
 
     private void Awake()
@@ -39,6 +46,27 @@ public class LevelController : MonoBehaviour
     private void Start()
     {
         PlayerMesh.GetComponent<Renderer>().material = DataController.Instance.PlayerMaterial;
+
+        CurrentEnvironment = PlayerPrefs.GetInt("CurrentEnvironment", -1);
+        if (CurrentEnvironment >= 0)
+        {
+            PlayerPrefs.DeleteKey("CurrentEnvironment");
+        }
+        else
+        {
+            LastEnvironment = PlayerPrefs.GetInt("LastEnvironment", -1);
+            do
+            {
+                CurrentEnvironment = Random.Range(0, LevelEnvironments.Length);
+                if (LastEnvironment < 0)
+                    break;
+            } while (CurrentEnvironment == LastEnvironment);
+        }
+
+        Floor.GetComponent<Renderer>().material = LevelEnvironments[CurrentEnvironment].FloorMaterial;
+        RenderSettings.skybox = LevelEnvironments[CurrentEnvironment].Skybox;
+        ColorUtility.TryParseHtmlString(LevelEnvironments[CurrentEnvironment].FogColor, out Color newFogColor);
+        RenderSettings.fogColor = newFogColor;
     }
 
 
@@ -74,6 +102,9 @@ public class LevelController : MonoBehaviour
     private void OnDisable()
     {
         Time.timeScale = 1;
+
+        if (!_isLvlComplete)
+            PlayerPrefs.SetInt("CurrentEnvironment", CurrentEnvironment);
     }
 
 
@@ -187,6 +218,9 @@ public class LevelController : MonoBehaviour
 
         CoinCounter *= XCounter;
         UIController.Instance.GameOver(CoinCounter, XCounter);
+
+        PlayerPrefs.SetInt("LastEnvironment", CurrentEnvironment);
+        _isLvlComplete = true;
     }
 
 

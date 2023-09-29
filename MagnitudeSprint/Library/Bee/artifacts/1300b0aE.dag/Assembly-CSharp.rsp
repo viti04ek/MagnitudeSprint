@@ -354,6 +354,7 @@
 "Assets/Scripts/Data/GameData.cs"
 "Assets/Scripts/Data/HatsData.cs"
 "Assets/Scripts/Data/LevelController.cs"
+"Assets/Scripts/Data/LevelEnvironment.cs"
 "Assets/Scripts/Data/SkinsData.cs"
 "Assets/Scripts/Obstacles/Barbell.cs"
 "Assets/Scripts/Obstacles/Enemy.cs"

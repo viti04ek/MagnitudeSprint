@@ -2566,6 +2566,13 @@ MonoBehaviour:
   CoinCounter: 0
   XCounter: 1
   PlayerMesh: {fileID: 6863048291775264290}
+  LevelEnvironments:
+  - FloorMaterial: {fileID: 2100000, guid: 569e0933fd3b3eb45a5fe148fca8890f, type: 2}
+    Skybox: {fileID: 2100000, guid: 52fcefd712182d743a781fde12426775, type: 2}
+    FogColor: '#186466'
+  Floor: {fileID: 1091572554}
+  LastEnvironment: 0
+  CurrentEnvironment: 0
 --- !u!4 &947675261
 Transform:
   m_ObjectHideFlags: 0
