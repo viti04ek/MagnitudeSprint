@@ -92,9 +92,15 @@ public class ShopController : MonoBehaviour
     {
         BuyItemID = id;
         IsItemSkin = isSkin;
-        if (DataController.Instance.GameData.CoinCounter >= DataController.Instance.GameData.SkinsData[BuyItemID].Price)
+
+        if (IsItemSkin && DataController.Instance.GameData.CoinCounter >= DataController.Instance.GameData.SkinsData[BuyItemID].Price)
         {
             PriceText.text = DataController.Instance.GameData.SkinsData[BuyItemID].Price.ToString();
+            ShowBuyMenu();
+        }
+        else if (!IsItemSkin && DataController.Instance.GameData.CoinCounter >= DataController.Instance.GameData.HatsData[BuyItemID].Price)
+        {
+            PriceText.text = DataController.Instance.GameData.HatsData[BuyItemID].Price.ToString();
             ShowBuyMenu();
         }
         else
