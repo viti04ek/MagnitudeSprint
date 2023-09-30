@@ -32,6 +32,8 @@ public class LevelController : MonoBehaviour
     public int LastEnvironment;
     public int CurrentEnvironment;
 
+    public GameObject HatSpawn;
+
     private GameStatement _prevGameStatement;
     private bool _isLvlComplete = false;
 
@@ -67,6 +69,9 @@ public class LevelController : MonoBehaviour
         RenderSettings.skybox = LevelEnvironments[CurrentEnvironment].Skybox;
         ColorUtility.TryParseHtmlString(LevelEnvironments[CurrentEnvironment].FogColor, out Color newFogColor);
         RenderSettings.fogColor = newFogColor;
+
+        if (DataController.Instance.PlayerHat != null)
+            Instantiate(DataController.Instance.PlayerHat, HatSpawn.transform.position, HatSpawn.transform.rotation, HatSpawn.transform);
     }
 
 

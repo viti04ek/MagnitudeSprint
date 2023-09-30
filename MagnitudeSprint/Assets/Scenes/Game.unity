@@ -2582,6 +2582,7 @@ MonoBehaviour:
   Floor: {fileID: 1091572554}
   LastEnvironment: 0
   CurrentEnvironment: 0
+  HatSpawn: {fileID: 1812654590}
 --- !u!4 &947675261
 Transform:
   m_ObjectHideFlags: 0
