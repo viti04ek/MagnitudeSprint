@@ -35,12 +35,12 @@ public class PlayerManager : MonoBehaviour
         else if (other.gameObject.CompareTag("SteakLoot"))
         {
             ChangeStrength(1);
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<FlyToTarget>().Fly();
         }
         else if (other.gameObject.CompareTag("Coin"))
         {
             LevelController.Instance.AddCoin();
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<FlyToTarget>().Fly();
         }
         else if (other.gameObject.CompareTag("Finish"))
         {
