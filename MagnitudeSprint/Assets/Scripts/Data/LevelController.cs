@@ -117,8 +117,8 @@ public class LevelController : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        /*if (!_isLvlComplete)
-            PlayerPrefs.SetInt("CurrentEnvironment", CurrentEnvironment);*/
+        if (!_isLvlComplete)
+            PlayerPrefs.SetInt("CurrentEnvironment", CurrentEnvironment);
     }
 
 

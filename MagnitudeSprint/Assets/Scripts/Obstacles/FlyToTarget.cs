@@ -26,7 +26,7 @@ public class FlyToTarget : MonoBehaviour
         {
             Vector3 targetPos = _target.transform.position;
             targetPos.z = 5f;
-            transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(targetPos), Speed);
+            transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(targetPos), Speed * Time.deltaTime);
         }
     }
 
@@ -36,7 +36,7 @@ public class FlyToTarget : MonoBehaviour
         GetComponent<Obstacle>().Stop();
         GetComponent<Obstacle>().enabled = false;
         _fly = true;
-        Invoke("Die", 0.2f);
+        Invoke("Die", 0.5f);
     }
 
 

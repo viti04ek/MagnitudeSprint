@@ -106,7 +106,7 @@ public class DataController : MonoBehaviour
 
     private void OnDisable()
     {
-        //SaveData();
+        SaveData();
     }
 
 

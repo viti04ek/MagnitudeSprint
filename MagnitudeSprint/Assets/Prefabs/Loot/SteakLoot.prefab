@@ -248,4 +248,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsCoin: 0
-  Speed: 0.09
+  Speed: 4.5
