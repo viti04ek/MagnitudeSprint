@@ -24,6 +24,18 @@ public class AudioController : MonoBehaviour
     }
 
 
+    private void OnEnable()
+    {
+        Volume = PlayerPrefs.GetFloat("Volume", 1);
+    }
+
+
+    private void OnDisable()
+    {
+        PlayerPrefs.SetFloat("Volume", Volume);
+    }
+
+
     public void BarbellSlap(Vector3 pos)
     {
         if (Volume > 0)

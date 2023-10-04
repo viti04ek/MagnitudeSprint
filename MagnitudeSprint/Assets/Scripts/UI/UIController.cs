@@ -25,6 +25,11 @@ public class UIController : MonoBehaviour
     public Text LvlText;
     public Text StartCoinCounter;
 
+    public Slider VolumeSlider;
+    public Image VolumeImg;
+    public Sprite VolumeSprite;
+    public Sprite NoVolumeSprite;
+
 
     private void Awake()
     {
@@ -37,6 +42,12 @@ public class UIController : MonoBehaviour
     {
         LvlText.text = $"Level: {DataController.Instance.GameData.LevelCounter}";
         StartCoinCounter.text = DataController.Instance.GameData.CoinCounter.ToString();
+
+        VolumeSlider.value = AudioController.Instance.Volume;
+        if (VolumeSlider.value > 0)
+            VolumeImg.sprite = VolumeSprite;
+        else
+            VolumeImg.sprite = NoVolumeSprite;
     }
 
 
@@ -87,5 +98,16 @@ public class UIController : MonoBehaviour
         FinishCoinsText.text = $"{coins / x} X{x}";
         AdsText.text = $"Claim {coins * 3}";
         ClaimText.text = $"Claim {coins}";
+    }
+
+
+    public void OnVolumeChange()
+    {
+        AudioController.Instance.Volume = VolumeSlider.value;
+
+        if (VolumeSlider.value > 0)
+            VolumeImg.sprite = VolumeSprite;
+        else
+            VolumeImg.sprite = NoVolumeSprite;
     }
 }
