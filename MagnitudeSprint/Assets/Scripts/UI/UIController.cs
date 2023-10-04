@@ -68,6 +68,7 @@ public class UIController : MonoBehaviour
     {
         GameOnUI.SetActive(false);
         PlayerLoseUI.SetActive(true);
+        AudioController.Instance.PlayerLose(Vector3.zero);
     }
 
 
@@ -81,6 +82,7 @@ public class UIController : MonoBehaviour
     {
         GameOnUI.SetActive(false);
         GameOverUI.SetActive(true);
+        AudioController.Instance.GameOver(Vector3.zero);
 
         FinishCoinsText.text = $"{coins / x} X{x}";
         AdsText.text = $"Claim {coins * 3}";

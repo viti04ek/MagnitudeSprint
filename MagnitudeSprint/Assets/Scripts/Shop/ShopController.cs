@@ -117,6 +117,7 @@ public class ShopController : MonoBehaviour
         else
             DataController.Instance.BuyHat(BuyItemID);
 
+        AudioController.Instance.BuyItem(Vector3.zero);
         HideBuyMenu();
     }
 }

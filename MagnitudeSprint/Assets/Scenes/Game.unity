@@ -3298,6 +3298,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1245558378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1245558380}
+  - component: {fileID: 1245558379}
+  m_Layer: 0
+  m_Name: AudioController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1245558379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245558378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d603b91df67616343b7c122428602d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioList:
+    BarbellSlap: {fileID: 8300000, guid: 8ccf2e162fcb1614aa12c2d3d1cc1a5e, type: 3}
+    BuyItem: {fileID: 8300000, guid: 6630c15748b003e418a48e2a2a605974, type: 3}
+    CoinPickUp: {fileID: 8300000, guid: 75c3b96f7820eda4a8e23d5c77a2a210, type: 3}
+    EnemyHit: {fileID: 8300000, guid: 7c4e6d7e69f080a40bbf350aa4b6cd6e, type: 3}
+    GameOver: {fileID: 8300000, guid: 65dee0f648ea4754b8d12f6e6bb7792f, type: 3}
+    LootPickUp: {fileID: 8300000, guid: 63203a770740b5d49bed64b24364cc7a, type: 3}
+    PlayerFall: {fileID: 8300000, guid: ca9093483e632a44094cf6862f7e2b8f, type: 3}
+    PlayerLose: {fileID: 8300000, guid: 5c80bf4581ba1374fb14aeb9265c903c, type: 3}
+  Volume: 1
+--- !u!4 &1245558380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245558378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 679.936, y: 1379.272, z: 56.166992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1301087113
 GameObject:
   m_ObjectHideFlags: 0

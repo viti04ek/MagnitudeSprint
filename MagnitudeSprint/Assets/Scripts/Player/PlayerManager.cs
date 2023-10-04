@@ -23,24 +23,32 @@ public class PlayerManager : MonoBehaviour
             int delta = -other.gameObject.GetComponent<Enemy>().Strength;
             ChangeStrength(delta);
             if (_strength > 0)
+            {
                 other.gameObject.GetComponent<Enemy>().Fall();
+                AudioController.Instance.EnemyHit(other.gameObject.transform.position);
+            }
         }
         else if (other.gameObject.CompareTag("BarbellObstacle"))
         {
             ChangeStrength(-1);
             _currBarbell = other.gameObject;
             if (_strength > 0)
+            {
                 SmashBarbell();
+                AudioController.Instance.BarbellSlap(other.gameObject.transform.position);
+            }
         }
         else if (other.gameObject.CompareTag("SteakLoot"))
         {
             ChangeStrength(1);
             other.gameObject.GetComponent<FlyToTarget>().Fly();
+            AudioController.Instance.LootPickUp(other.gameObject.transform.position);
         }
         else if (other.gameObject.CompareTag("Coin"))
         {
             LevelController.Instance.AddCoin();
             other.gameObject.GetComponent<FlyToTarget>().Fly();
+            AudioController.Instance.CoinPickUp(other.gameObject.transform.position);
         }
         else if (other.gameObject.CompareTag("Finish"))
         {
@@ -63,6 +71,7 @@ public class PlayerManager : MonoBehaviour
     private void SmashBarbell()
     {
         _currBarbell.GetComponent<Barbell>().Slap();
+        AudioController.Instance.BarbellSlap(transform.position);
     }
 
 

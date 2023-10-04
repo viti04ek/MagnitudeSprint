@@ -185,6 +185,7 @@ public class LevelController : MonoBehaviour
         _prevGameStatement = GameStatement;
         GameStatement = GameStatement.PlayerLose;
         PlayerAnimation.Instance.Fall();
+        AudioController.Instance.PlayerFall(Vector3.zero);
         ObstacleSpawner.SetActive(false);
 
         var obstacles = FindObjectsOfType<Obstacle>();
@@ -210,6 +211,7 @@ public class LevelController : MonoBehaviour
         _prevGameStatement = GameStatement;
         GameStatement = GameStatement.GameOver;
         PlayerAnimation.Instance.Fall();
+        AudioController.Instance.PlayerFall(Vector3.zero);
         ObstacleSpawner.SetActive(false);
 
         var finish = FindObjectOfType<FinishObstacle>();
