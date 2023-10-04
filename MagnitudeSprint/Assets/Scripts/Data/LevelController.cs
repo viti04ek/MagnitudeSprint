@@ -72,6 +72,8 @@ public class LevelController : MonoBehaviour
 
         if (DataController.Instance.PlayerHat != null)
             Instantiate(DataController.Instance.PlayerHat, HatSpawn.transform.position, HatSpawn.transform.rotation, HatSpawn.transform);
+
+        Time.timeScale = 1;
     }
 
 
@@ -108,8 +110,18 @@ public class LevelController : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        if (!_isLvlComplete)
-            PlayerPrefs.SetInt("CurrentEnvironment", CurrentEnvironment);
+        /*if (!_isLvlComplete)
+            PlayerPrefs.SetInt("CurrentEnvironment", CurrentEnvironment);*/
+    }
+
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if (!focus)
+        {
+            if (!_isLvlComplete)
+                PlayerPrefs.SetInt("CurrentEnvironment", CurrentEnvironment);
+        }
     }
 
 

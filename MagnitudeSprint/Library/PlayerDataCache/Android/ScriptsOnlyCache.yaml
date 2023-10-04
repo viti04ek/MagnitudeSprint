@@ -1,10 +1,14 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudioController
     - Barbell
     - CameraMovement
+    - DataController
     - Enemy
     - FinishObstacle
+    - FlyToTarget
+    - ItemButton
     - LevelController
     - LoadScene
     - Obstacle
@@ -12,6 +16,7 @@ ScriptsOnlyBuild:
     - PlayerAnimation
     - PlayerManager
     - PlayerMovement
+    - ShopController
     - UIController
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
@@ -23,12 +28,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -38,12 +37,20 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.Outline
+    - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   serializedClasses:
+    Assembly-CSharp:
+    - AudioList
+    - GameData
+    - LevelEnvironment
     DOTween:
     - DG.Tweening.Core.DOTweenSettings/ModulesSetup
     - DG.Tweening.Core.DOTweenSettings/SafeModeOptions
@@ -65,6 +72,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
+    - UnityEngine.RectOffset
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
@@ -77,6 +85,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
@@ -85,10 +94,25 @@ ScriptsOnlyBuild:
     methodName: ReloadScene
   - assembly: Assembly-CSharp
     fullTypeName: LevelController
+    methodName: ClaimAwards
+  - assembly: Assembly-CSharp
+    fullTypeName: LoadScene
+    methodName: ReloadScene
+  - assembly: Assembly-CSharp
+    fullTypeName: LevelController
+    methodName: ClaimAwards
+  - assembly: Assembly-CSharp
+    fullTypeName: LevelController
     methodName: UnPause
+  - assembly: Assembly-CSharp
+    fullTypeName: LoadScene
+    methodName: LoadOtherScene
   - assembly: Assembly-CSharp
     fullTypeName: LevelController
     methodName: StartGame
+  - assembly: Assembly-CSharp
+    fullTypeName: UIController
+    methodName: OnVolumeChange
   - assembly: Assembly-CSharp
     fullTypeName: LoadScene
     methodName: ReloadScene
@@ -98,8 +122,152 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: LevelController
     methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopController
+    methodName: ShowHat
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopController
+    methodName: ShowSkin
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: LoadScene
+    methodName: LoadOtherScene
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopController
+    methodName: HideBuyMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopController
+    methodName: Buy
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopController
+    methodName: HideNoMoneyMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemButton
+    methodName: Click
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Game.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -130,6 +298,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 91
@@ -141,59 +311,65 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1546}
+      Script: {instanceID: 1552}
     - Class: 114
-      Script: {instanceID: 2164}
+      Script: {instanceID: 2172}
     - Class: 114
-      Script: {instanceID: 2470}
+      Script: {instanceID: 2478}
     - Class: 114
-      Script: {instanceID: 2586}
+      Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2788}
+      Script: {instanceID: 2596}
     - Class: 114
-      Script: {instanceID: 3064}
+      Script: {instanceID: 2798}
     - Class: 114
-      Script: {instanceID: 3276}
+      Script: {instanceID: 3074}
     - Class: 114
-      Script: {instanceID: 3402}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 3676}
+      Script: {instanceID: 3412}
     - Class: 114
-      Script: {instanceID: 3968}
+      Script: {instanceID: 3686}
     - Class: 114
-      Script: {instanceID: 4076}
+      Script: {instanceID: 3978}
     - Class: 114
-      Script: {instanceID: 4120}
+      Script: {instanceID: 4086}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 4130}
     - Class: 114
-      Script: {instanceID: 4520}
+      Script: {instanceID: 4338}
     - Class: 114
-      Script: {instanceID: 4844}
+      Script: {instanceID: 4530}
     - Class: 114
-      Script: {instanceID: 4960}
+      Script: {instanceID: 4856}
     - Class: 114
-      Script: {instanceID: 5014}
+      Script: {instanceID: 4972}
     - Class: 114
-      Script: {instanceID: 5036}
+      Script: {instanceID: 5026}
     - Class: 114
-      Script: {instanceID: 5282}
+      Script: {instanceID: 5048}
     - Class: 114
-      Script: {instanceID: 5586}
+      Script: {instanceID: 5294}
     - Class: 114
-      Script: {instanceID: 6056}
+      Script: {instanceID: 5602}
     - Class: 114
-      Script: {instanceID: 6292}
+      Script: {instanceID: 5832}
     - Class: 114
-      Script: {instanceID: 6382}
+      Script: {instanceID: 6076}
     - Class: 114
-      Script: {instanceID: 6916}
+      Script: {instanceID: 6312}
     - Class: 114
-      Script: {instanceID: 7058}
+      Script: {instanceID: 6402}
+    - Class: 114
+      Script: {instanceID: 6938}
+    - Class: 114
+      Script: {instanceID: 7066}
     - Class: 114
       Script: {instanceID: 7084}
     - Class: 114
-      Script: {instanceID: 7724}
+      Script: {instanceID: 7110}
+    - Class: 114
+      Script: {instanceID: 7750}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -219,6 +395,81 @@ ScriptsOnlyBuild:
     - Class: 258
       Script: {instanceID: 0}
     - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Scenes/Shop.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1552}
+    - Class: 114
+      Script: {instanceID: 1746}
+    - Class: 114
+      Script: {instanceID: 2596}
+    - Class: 114
+      Script: {instanceID: 2798}
+    - Class: 114
+      Script: {instanceID: 3074}
+    - Class: 114
+      Script: {instanceID: 3246}
+    - Class: 114
+      Script: {instanceID: 3854}
+    - Class: 114
+      Script: {instanceID: 4630}
+    - Class: 114
+      Script: {instanceID: 4730}
+    - Class: 114
+      Script: {instanceID: 5294}
+    - Class: 114
+      Script: {instanceID: 5602}
+    - Class: 114
+      Script: {instanceID: 5832}
+    - Class: 114
+      Script: {instanceID: 6076}
+    - Class: 114
+      Script: {instanceID: 6402}
+    - Class: 114
+      Script: {instanceID: 6938}
+    - Class: 114
+      Script: {instanceID: 7128}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -257,6 +508,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 43243f9f9374df58fae0334823bc7aaf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemButton
   - hash:
       serializedVersion: 2
       Hash: 8a874a8207a7664bdf44e61f28717254
@@ -341,6 +598,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameVisibleMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 7f9c7a7f82c5049ff0ea633d60d52d55
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FlyToTarget
   - hash:
       serializedVersion: 2
       Hash: 27e5341178f188b89bdc6495710b590c
@@ -595,7 +858,7 @@ ScriptsOnlyBuild:
     className: ScriptGraphAsset
   - hash:
       serializedVersion: 2
-      Hash: a3bd9bfca70351db5fe500398473e93e
+      Hash: 3c062d32f9c2c5629b62a424a58caf5b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelController
@@ -697,7 +960,7 @@ ScriptsOnlyBuild:
     className: CameraController
   - hash:
       serializedVersion: 2
-      Hash: b6d46bb0e1d898d65080c67be7211b44
+      Hash: 94d508ad76b5351e9e72b12e42eff94f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObstacleSpawner
@@ -767,6 +1030,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextInfoDebugTool
+  - hash:
+      serializedVersion: 2
+      Hash: f186d1d9ad9a71fddd804bac37f3cfed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -961,6 +1230,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 3f3e774b78ca29f7a17afdba4b1d3db7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DataController
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1153,7 +1428,13 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 5a557b71a3fa134f5f25e2d325dbe251
+      Hash: 0d0ed674d836a5907bba01143840ed63
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioController
+  - hash:
+      serializedVersion: 2
+      Hash: bf2579c5618d4f8627d31cbfd72d4460
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIController
@@ -1285,5 +1566,6 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/Game.unity
+  - Assets/Scenes/Shop.unity
   playerPath: D:/Unity/MagnitudeSprint_Build/MagnitudeSprint.apk

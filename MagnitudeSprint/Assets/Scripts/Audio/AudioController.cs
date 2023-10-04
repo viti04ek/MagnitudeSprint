@@ -26,7 +26,14 @@ public class AudioController : MonoBehaviour
 
     private void OnEnable()
     {
-        Volume = PlayerPrefs.GetFloat("Volume", 1);
+        //Volume = PlayerPrefs.GetFloat("Volume", 1);
+    }
+
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if (!focus)
+            Volume = PlayerPrefs.GetFloat("Volume", 1);
     }
 
 

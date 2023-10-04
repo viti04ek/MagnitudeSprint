@@ -97,9 +97,16 @@ public class DataController : MonoBehaviour
     }
 
 
+    private void OnApplicationFocus(bool focus)
+    {
+        if (!focus)
+            SaveData();
+    }
+
+
     private void OnDisable()
     {
-        SaveData();
+        //SaveData();
     }
 
 
