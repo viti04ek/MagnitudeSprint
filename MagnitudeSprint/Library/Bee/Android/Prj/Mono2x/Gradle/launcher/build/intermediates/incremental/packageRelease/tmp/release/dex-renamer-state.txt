@@ -1,4 +1,4 @@
-#Wed Oct 04 09:50:55 EEST 2023
+#Wed Oct 04 12:46:31 EEST 2023
 base.0=D\:\\Unity\\MagnitudeSprint\\MagnitudeSprint\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

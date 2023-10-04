@@ -60,11 +60,18 @@ public class LevelController : MonoBehaviour
             do
             {
                 CurrentEnvironment = Random.Range(0, LevelEnvironments.Length);
+
+                if (LevelEnvironments[CurrentEnvironment].Skybox == null || LevelEnvironments[CurrentEnvironment].FloorMaterial == null || LevelEnvironments[CurrentEnvironment].FogColor == null)
+                {
+                    CurrentEnvironment = -1;
+                    continue;
+                }
+
                 if (LastEnvironment < 0)
                     break;
             } while (CurrentEnvironment == LastEnvironment);
         }
-
+        
         Floor.GetComponent<Renderer>().material = LevelEnvironments[CurrentEnvironment].FloorMaterial;
         RenderSettings.skybox = LevelEnvironments[CurrentEnvironment].Skybox;
         ColorUtility.TryParseHtmlString(LevelEnvironments[CurrentEnvironment].FogColor, out Color newFogColor);

@@ -10,6 +10,12 @@ public class PlayerMovement : MonoBehaviour
     public bool Move = true;
 
 
+    private void Start()
+    {
+        enabled = false;
+    }
+
+
     private void Update()
     {
         if (Move)
