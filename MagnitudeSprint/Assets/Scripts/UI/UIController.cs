@@ -30,6 +30,8 @@ public class UIController : MonoBehaviour
     public Sprite VolumeSprite;
     public Sprite NoVolumeSprite;
 
+    public GameObject LoadingScreen;
+
 
     private void Awake()
     {
@@ -109,5 +111,11 @@ public class UIController : MonoBehaviour
             VolumeImg.sprite = VolumeSprite;
         else
             VolumeImg.sprite = NoVolumeSprite;
+    }
+
+
+    public void ShowLoadingScreen()
+    {
+        LoadingScreen.SetActive(true);
     }
 }

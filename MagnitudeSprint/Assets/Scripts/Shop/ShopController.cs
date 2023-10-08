@@ -24,6 +24,8 @@ public class ShopController : MonoBehaviour
 
     public Text CoinText;
 
+    public GameObject LoadingScreen;
+
 
     private void Awake()
     {
@@ -119,5 +121,11 @@ public class ShopController : MonoBehaviour
 
         AudioController.Instance.BuyItem(Vector3.zero);
         HideBuyMenu();
+    }
+
+
+    public void ShowLoadingScreen()
+    {
+        LoadingScreen.SetActive(true);
     }
 }
