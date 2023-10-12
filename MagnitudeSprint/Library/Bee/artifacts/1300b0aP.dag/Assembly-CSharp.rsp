@@ -322,6 +322,7 @@
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Shop/ItemButton.cs"
 "Assets/Scripts/Shop/ShopController.cs"
+"Assets/Scripts/UI/LoadingScreen.cs"
 "Assets/Scripts/UI/LoadScene.cs"
 "Assets/Scripts/UI/UIController.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"

@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - ItemButton
     - LevelController
     - LoadScene
+    - LoadingScreen
     - Obstacle
     - ObstacleSpawner
     - PlayerAnimation
@@ -286,8 +287,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 64
@@ -313,63 +312,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1552}
     - Class: 114
-      Script: {instanceID: 2172}
+      Script: {instanceID: 2480}
     - Class: 114
-      Script: {instanceID: 2478}
+      Script: {instanceID: 2528}
     - Class: 114
-      Script: {instanceID: 2526}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2596}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 2798}
+      Script: {instanceID: 3076}
     - Class: 114
-      Script: {instanceID: 3074}
+      Script: {instanceID: 3288}
     - Class: 114
-      Script: {instanceID: 3286}
+      Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 3412}
+      Script: {instanceID: 4132}
     - Class: 114
-      Script: {instanceID: 3686}
+      Script: {instanceID: 4532}
     - Class: 114
-      Script: {instanceID: 3978}
+      Script: {instanceID: 4858}
     - Class: 114
-      Script: {instanceID: 4086}
+      Script: {instanceID: 4974}
     - Class: 114
-      Script: {instanceID: 4130}
+      Script: {instanceID: 5028}
     - Class: 114
-      Script: {instanceID: 4338}
+      Script: {instanceID: 5296}
     - Class: 114
-      Script: {instanceID: 4530}
+      Script: {instanceID: 5604}
     - Class: 114
-      Script: {instanceID: 4856}
+      Script: {instanceID: 5834}
     - Class: 114
-      Script: {instanceID: 4972}
+      Script: {instanceID: 6078}
     - Class: 114
-      Script: {instanceID: 5026}
+      Script: {instanceID: 6314}
     - Class: 114
-      Script: {instanceID: 5048}
+      Script: {instanceID: 6404}
     - Class: 114
-      Script: {instanceID: 5294}
+      Script: {instanceID: 6940}
     - Class: 114
-      Script: {instanceID: 5602}
+      Script: {instanceID: 7068}
     - Class: 114
-      Script: {instanceID: 5832}
+      Script: {instanceID: 7086}
     - Class: 114
-      Script: {instanceID: 6076}
+      Script: {instanceID: 7112}
     - Class: 114
-      Script: {instanceID: 6312}
-    - Class: 114
-      Script: {instanceID: 6402}
-    - Class: 114
-      Script: {instanceID: 6938}
-    - Class: 114
-      Script: {instanceID: 7066}
-    - Class: 114
-      Script: {instanceID: 7084}
-    - Class: 114
-      Script: {instanceID: 7110}
-    - Class: 114
-      Script: {instanceID: 7750}
+      Script: {instanceID: 7752}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -395,6 +382,73 @@ ScriptsOnlyBuild:
     - Class: 258
       Script: {instanceID: 0}
     - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Scenes/Loading.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1552}
+    - Class: 114
+      Script: {instanceID: 1600}
+    - Class: 114
+      Script: {instanceID: 2174}
+    - Class: 114
+      Script: {instanceID: 2598}
+    - Class: 114
+      Script: {instanceID: 2800}
+    - Class: 114
+      Script: {instanceID: 3414}
+    - Class: 114
+      Script: {instanceID: 3980}
+    - Class: 114
+      Script: {instanceID: 4088}
+    - Class: 114
+      Script: {instanceID: 4340}
+    - Class: 114
+      Script: {instanceID: 5050}
+    - Class: 114
+      Script: {instanceID: 5296}
+    - Class: 114
+      Script: {instanceID: 5604}
+    - Class: 114
+      Script: {instanceID: 6078}
+    - Class: 114
+      Script: {instanceID: 6404}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/Shop.unity:
     - Class: 1
@@ -426,35 +480,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1552}
     - Class: 114
-      Script: {instanceID: 1746}
+      Script: {instanceID: 1748}
     - Class: 114
-      Script: {instanceID: 2596}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2798}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 3074}
+      Script: {instanceID: 3076}
     - Class: 114
-      Script: {instanceID: 3246}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 3854}
+      Script: {instanceID: 3856}
     - Class: 114
-      Script: {instanceID: 4630}
+      Script: {instanceID: 4632}
     - Class: 114
-      Script: {instanceID: 4730}
+      Script: {instanceID: 4732}
     - Class: 114
-      Script: {instanceID: 5294}
+      Script: {instanceID: 5296}
     - Class: 114
-      Script: {instanceID: 5602}
+      Script: {instanceID: 5604}
     - Class: 114
-      Script: {instanceID: 5832}
+      Script: {instanceID: 5834}
     - Class: 114
-      Script: {instanceID: 6076}
+      Script: {instanceID: 6078}
     - Class: 114
-      Script: {instanceID: 6402}
+      Script: {instanceID: 6404}
     - Class: 114
-      Script: {instanceID: 6938}
+      Script: {instanceID: 6940}
     - Class: 114
-      Script: {instanceID: 7128}
+      Script: {instanceID: 7130}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -484,6 +538,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 83540cc1c8ca8130c1d73cb8a25d1a02
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadingScreen
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1032,7 +1092,7 @@ ScriptsOnlyBuild:
     className: TMP_TextInfoDebugTool
   - hash:
       serializedVersion: 2
-      Hash: f186d1d9ad9a71fddd804bac37f3cfed
+      Hash: 6bec6812cb23803825a4fb45d7de090b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopController
@@ -1434,7 +1494,7 @@ ScriptsOnlyBuild:
     className: AudioController
   - hash:
       serializedVersion: 2
-      Hash: bf2579c5618d4f8627d31cbfd72d4460
+      Hash: bca2ae53e04c0a2e15b339bdd497481b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIController
@@ -1566,6 +1626,7 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 13
   scenePathNames:
+  - Assets/Scenes/Loading.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Shop.unity
   playerPath: D:/Unity/MagnitudeSprint_Build/MagnitudeSprint.apk

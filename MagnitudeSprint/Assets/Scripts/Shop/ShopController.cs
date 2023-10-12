@@ -26,6 +26,8 @@ public class ShopController : MonoBehaviour
 
     public GameObject LoadingScreen;
 
+    private bool _isSkinTarget = true;
+
 
     private void Awake()
     {
@@ -37,6 +39,19 @@ public class ShopController : MonoBehaviour
     private void Start()
     {
         UpdateCoinText();
+    }
+
+
+    private void Update()
+    {
+        if (_isSkinTarget)
+        {
+            SkinPanel.SetActive(true);
+        }
+        else
+        {
+            HatPanel.SetActive(true);
+        }
     }
 
 
@@ -52,6 +67,14 @@ public class ShopController : MonoBehaviour
         SkinPanel.GetComponent<RectTransform>().DOAnchorPosX(0, 0.7f, false);
         SkinBtn.GetComponent<Image>().sprite = PressedBtn;
         HatBtn.GetComponent<Image>().sprite = UnpressedBtn;
+        _isSkinTarget = true;
+        Invoke("HideHat", 1f);
+    }
+
+
+    private void HideSkin()
+    {
+        SkinPanel.SetActive(false);
     }
 
 
@@ -61,6 +84,14 @@ public class ShopController : MonoBehaviour
         HatPanel.GetComponent<RectTransform>().DOAnchorPosX(0, 0.7f, false);
         HatBtn.GetComponent<Image>().sprite = PressedBtn;
         SkinBtn.GetComponent<Image>().sprite = UnpressedBtn;
+        _isSkinTarget = false;
+        Invoke("HideSkin", 1f);
+    }
+
+
+    private void HideHat()
+    {
+        HatPanel.SetActive(false);
     }
 
 
