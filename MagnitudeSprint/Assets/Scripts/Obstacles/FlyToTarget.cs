@@ -35,6 +35,7 @@ public class FlyToTarget : MonoBehaviour
     {
         GetComponent<Obstacle>().Stop();
         GetComponent<Obstacle>().enabled = false;
+        GetComponent<CapsuleCollider>().enabled = false;
         _fly = true;
         Invoke("Die", 0.5f);
     }
