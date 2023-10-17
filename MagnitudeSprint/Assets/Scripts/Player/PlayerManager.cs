@@ -35,8 +35,9 @@ public class PlayerManager : MonoBehaviour
             _currBarbell = other.gameObject;
             if (_strength > 0)
             {
-                SmashBarbell();
-                AudioController.Instance.BarbellSlap(other.gameObject.transform.position);
+                other.gameObject.GetComponent<BoxCollider>().enabled = false;
+                Invoke("SmashBarbell", 0.05f);
+                PlayerAnimation.Instance.Kick();
             }
         }
         else if (other.gameObject.CompareTag("SteakLoot"))

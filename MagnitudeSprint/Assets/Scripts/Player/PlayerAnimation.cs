@@ -45,4 +45,11 @@ public class PlayerAnimation : MonoBehaviour
         Animator.SetInteger("State", 4);
         Invoke("Run", 0.07f);
     }
+
+
+    public void Kick()
+    {
+        Animator.SetInteger("State", 5);
+        Invoke("Run", 0.07f);
+    }
 }
