@@ -38,4 +38,11 @@ public class PlayerAnimation : MonoBehaviour
     {
         Animator.SetInteger("State", 3);
     }
+
+
+    public void Push()
+    {
+        Animator.SetInteger("State", 4);
+        Invoke("Run", 0.07f);
+    }
 }

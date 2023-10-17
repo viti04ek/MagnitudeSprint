@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour
             if (_strength > 0)
             {
                 other.gameObject.GetComponent<Enemy>().Fall();
+                PlayerAnimation.Instance.Push();
                 AudioController.Instance.EnemyHit(other.gameObject.transform.position);
             }
         }
