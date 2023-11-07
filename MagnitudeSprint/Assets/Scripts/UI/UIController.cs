@@ -37,6 +37,8 @@ public class UIController : MonoBehaviour
 
     public GameObject LoadingScreen;
 
+    public GameObject RestartButton;
+
 
     private void Awake()
     {
@@ -80,12 +82,16 @@ public class UIController : MonoBehaviour
     public void Pause()
     {
         PauseUI.SetActive(true);
+        RestartButton.SetActive(true);
     }
 
 
     public void UnPause()
     {
         PauseUI.SetActive(false);
+
+        if (LevelController.Instance.GameStatement == GameStatement.GameNotStarted)
+            PreStartUI.SetActive(true);
     }
 
     public void PlayerLose()
@@ -139,5 +145,13 @@ public class UIController : MonoBehaviour
     public void ShowLoadingScreen()
     {
         LoadingScreen.SetActive(true);
+    }
+
+
+    public void SettingsOn()
+    {
+        PreStartUI.SetActive(false);
+        PauseUI.SetActive(true);
+        RestartButton.SetActive(false);
     }
 }
