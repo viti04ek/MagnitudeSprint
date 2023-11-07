@@ -25,10 +25,15 @@ public class UIController : MonoBehaviour
     public Text LvlText;
     public Text StartCoinCounter;
 
-    public Slider VolumeSlider;
-    public Image VolumeImg;
-    public Sprite VolumeSprite;
-    public Sprite NoVolumeSprite;
+    public Slider SoundVolumeSlider;
+    public Image SoundVolumeImg;
+    public Sprite SoundVolumeSprite;
+    public Sprite NoSoundVolumeSprite;
+
+    public Slider MusicVolumeSlider;
+    public Image MusicVolumeImg;
+    public Sprite MusicVolumeSprite;
+    public Sprite NoMusicVolumeSprite;
 
     public GameObject LoadingScreen;
 
@@ -45,11 +50,17 @@ public class UIController : MonoBehaviour
         LvlText.text = $"Level: {DataController.Instance.GameData.LevelCounter}";
         StartCoinCounter.text = DataController.Instance.GameData.CoinCounter.ToString();
 
-        VolumeSlider.value = AudioController.Instance.Volume;
-        if (VolumeSlider.value > 0)
-            VolumeImg.sprite = VolumeSprite;
+        SoundVolumeSlider.value = AudioController.Instance.SoundVolume;
+        if (SoundVolumeSlider.value > 0)
+            SoundVolumeImg.sprite = SoundVolumeSprite;
         else
-            VolumeImg.sprite = NoVolumeSprite;
+            SoundVolumeImg.sprite = NoSoundVolumeSprite;
+
+        MusicVolumeSlider.value = AudioController.Instance.MusicVolume;
+        if (MusicVolumeSlider.value > 0)
+            MusicVolumeImg.sprite = MusicVolumeSprite;
+        else
+            MusicVolumeImg.sprite = NoMusicVolumeSprite;
     }
 
 
@@ -103,14 +114,25 @@ public class UIController : MonoBehaviour
     }
 
 
-    public void OnVolumeChange()
+    public void OnSoundVolumeChange()
     {
-        AudioController.Instance.Volume = VolumeSlider.value;
+        AudioController.Instance.SoundVolume = SoundVolumeSlider.value;
 
-        if (VolumeSlider.value > 0)
-            VolumeImg.sprite = VolumeSprite;
+        if (SoundVolumeSlider.value > 0)
+            SoundVolumeImg.sprite = SoundVolumeSprite;
         else
-            VolumeImg.sprite = NoVolumeSprite;
+            SoundVolumeImg.sprite = NoSoundVolumeSprite;
+    }
+
+
+    public void OnMusicVolumeChange()
+    {
+        AudioController.Instance.ChangeMusicVolume(MusicVolumeSlider.value);
+
+        if (MusicVolumeSlider.value > 0)
+            MusicVolumeImg.sprite = MusicVolumeSprite;
+        else
+            MusicVolumeImg.sprite = NoMusicVolumeSprite;
     }
 
 
