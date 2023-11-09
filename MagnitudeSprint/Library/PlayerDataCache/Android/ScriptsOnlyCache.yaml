@@ -29,6 +29,12 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -91,17 +97,23 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: LoadScene
-    methodName: ReloadScene
-  - assembly: Assembly-CSharp
-    fullTypeName: LevelController
-    methodName: ClaimAwards
+    fullTypeName: UIController
+    methodName: OnMusicVolumeChange
   - assembly: Assembly-CSharp
     fullTypeName: LoadScene
     methodName: ReloadScene
   - assembly: Assembly-CSharp
     fullTypeName: LevelController
     methodName: ClaimAwards
+  - assembly: Assembly-CSharp
+    fullTypeName: LoadScene
+    methodName: ReloadScene
+  - assembly: Assembly-CSharp
+    fullTypeName: LevelController
+    methodName: ClaimAwards
+  - assembly: Assembly-CSharp
+    fullTypeName: UIController
+    methodName: SettingsOn
   - assembly: Assembly-CSharp
     fullTypeName: LevelController
     methodName: UnPause
@@ -113,7 +125,7 @@ ScriptsOnlyBuild:
     methodName: StartGame
   - assembly: Assembly-CSharp
     fullTypeName: UIController
-    methodName: OnVolumeChange
+    methodName: OnSoundVolumeChange
   - assembly: Assembly-CSharp
     fullTypeName: LoadScene
     methodName: ReloadScene
@@ -297,6 +309,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
@@ -360,8 +374,6 @@ ScriptsOnlyBuild:
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -470,6 +482,10 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -1488,13 +1504,13 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 0d0ed674d836a5907bba01143840ed63
+      Hash: e6e9fff2c16752b1467c1a062dae89d2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AudioController
   - hash:
       serializedVersion: 2
-      Hash: bca2ae53e04c0a2e15b339bdd497481b
+      Hash: 27209187852529166991cb74f718f241
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIController

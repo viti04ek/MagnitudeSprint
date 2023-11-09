@@ -31,14 +31,7 @@ public class AudioController : MonoBehaviour
     {
         SoundVolume = PlayerPrefs.GetFloat("SoundVolume", 1);
         MusicVolume = PlayerPrefs.GetFloat("MusicVolume", 1);
-        FindBGMusic();
-    }
-
-
-    private void Update()
-    {
-        if (BGMusic == null)
-            FindBGMusic();
+        BGMusic.volume = MusicVolume;
     }
 
 
