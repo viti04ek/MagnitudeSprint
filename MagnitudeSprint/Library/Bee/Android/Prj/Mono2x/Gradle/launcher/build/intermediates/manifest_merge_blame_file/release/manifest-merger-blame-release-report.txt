@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.DefaultCompany.MagnitudeSprint"
+3    package="com.ViktorStoianovych.MagnitudeSprint"
 4    android:installLocation="preferExternal"
 5    android:versionCode="1"
 6    android:versionName="0.1" >
@@ -57,85 +57,133 @@
 34        android:required="false" />
 34-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:27:9-33
 35
-36    <application
-36-->D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-83
-37        android:extractNativeLibs="true"
-37-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:29:18-50
-38        android:icon="@mipmap/app_icon"
-38-->D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:49-80
-39        android:label="@string/app_name" >
-39-->D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:16-48
-40        <activity
-40-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:9-50:20
-41            android:name="com.unity3d.player.UnityPlayerActivity"
-41-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:31:13-66
-42            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-42-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:32:13-194
-43            android:hardwareAccelerated="false"
-43-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:33:13-48
-44            android:launchMode="singleTask"
-44-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:34:13-44
-45            android:resizeableActivity="false"
-45-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:35:13-47
-46            android:screenOrientation="fullUser"
-46-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:36:13-49
-47            android:theme="@style/UnityThemeSelector" >
-47-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:37:13-54
-48            <intent-filter>
-48-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:13-42:29
-49                <action android:name="android.intent.action.MAIN" />
-49-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:39:17-69
-49-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:39:25-66
-50
-51                <category android:name="android.intent.category.LAUNCHER" />
-51-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:41:17-77
-51-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:41:27-74
-52            </intent-filter>
+36    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+36-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:9:5-79
+36-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:9:22-76
+37    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+37-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:11:5-79
+37-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:11:22-76
+38
+39    <application
+39-->D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-83
+40        android:extractNativeLibs="true"
+40-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:29:18-50
+41        android:icon="@mipmap/app_icon"
+41-->D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:49-80
+42        android:label="@string/app_name" >
+42-->D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:16-48
+43        <activity
+43-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:9-50:20
+44            android:name="com.unity3d.player.UnityPlayerActivity"
+44-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:31:13-66
+45            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+45-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:32:13-194
+46            android:hardwareAccelerated="false"
+46-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:33:13-48
+47            android:launchMode="singleTask"
+47-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:34:13-44
+48            android:resizeableActivity="false"
+48-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:35:13-47
+49            android:screenOrientation="fullUser"
+49-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:36:13-49
+50            android:theme="@style/UnityThemeSelector" >
+50-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:37:13-54
+51            <intent-filter>
+51-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:13-42:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:39:17-69
+52-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:39:25-66
 53
-54            <meta-data
-54-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:44:13-46:40
-55                android:name="unityplayer.UnityActivity"
-55-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:45:17-57
-56                android:value="true" />
-56-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:46:17-37
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:41:17-77
+54-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:41:27-74
+55            </intent-filter>
+56
 57            <meta-data
-57-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:47:13-49:40
-58                android:name="android.notch_support"
-58-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:48:17-53
+57-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:44:13-46:40
+58                android:name="unityplayer.UnityActivity"
+58-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:45:17-57
 59                android:value="true" />
-59-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:49:17-37
-60        </activity>
-61
-62        <meta-data
-62-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:52:9-54:33
-63            android:name="unity.splash-mode"
-63-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:53:13-45
-64            android:value="0" />
-64-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:54:13-30
+59-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:46:17-37
+60            <meta-data
+60-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:47:13-49:40
+61                android:name="android.notch_support"
+61-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:48:17-53
+62                android:value="true" />
+62-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:49:17-37
+63        </activity>
+64
 65        <meta-data
-65-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:55:9-57:36
-66            android:name="unity.splash-enable"
-66-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:56:13-47
-67            android:value="True" />
-67-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:57:13-33
+65-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:52:9-54:33
+66            android:name="unity.splash-mode"
+66-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:53:13-45
+67            android:value="0" />
+67-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:54:13-30
 68        <meta-data
-68-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:58:9-60:36
-69            android:name="unity.launch-fullscreen"
-69-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:59:13-51
+68-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:55:9-57:36
+69            android:name="unity.splash-enable"
+69-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:56:13-47
 70            android:value="True" />
-70-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:60:13-33
+70-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:57:13-33
 71        <meta-data
-71-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:61:9-63:37
-72            android:name="unity.allow-resizable-window"
-72-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:62:13-56
-73            android:value="False" />
-73-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:63:13-34
+71-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:58:9-60:36
+72            android:name="unity.launch-fullscreen"
+72-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:59:13-51
+73            android:value="True" />
+73-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:60:13-33
 74        <meta-data
-74-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:64:9-66:50
-75            android:name="notch.config"
-75-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:65:13-40
-76            android:value="portrait|landscape" />
-76-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:66:13-47
-77    </application>
-78
-79</manifest>
+74-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:61:9-63:37
+75            android:name="unity.allow-resizable-window"
+75-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:62:13-56
+76            android:value="False" />
+76-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:63:13-34
+77        <meta-data
+77-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:64:9-66:50
+78            android:name="notch.config"
+78-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:65:13-40
+79            android:value="portrait|landscape" />
+79-->[:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:66:13-47
+80
+81        <activity
+81-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:14:9-18:74
+82            android:name="com.unity3d.services.ads.adunit.AdUnitActivity"
+82-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:15:13-74
+83            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+83-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:16:13-170
+84            android:hardwareAccelerated="true"
+84-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:17:13-47
+85            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+85-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:18:13-71
+86        <activity
+86-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:19:9-23:86
+87            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity"
+87-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:20:13-85
+88            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+88-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:21:13-170
+89            android:hardwareAccelerated="true"
+89-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:22:13-47
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+90-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:23:13-83
+91        <activity
+91-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:24:9-28:86
+92            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity"
+92-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:25:13-93
+93            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+93-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:26:13-170
+94            android:hardwareAccelerated="false"
+94-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:27:13-48
+95            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+95-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:28:13-83
+96        <activity
+96-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:29:9-33:74
+97            android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity"
+97-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:30:13-82
+98            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+98-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:31:13-170
+99            android:hardwareAccelerated="false"
+99-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:32:13-48
+100            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+100-->[:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:33:13-71
+101    </application>
+102
+103</manifest>

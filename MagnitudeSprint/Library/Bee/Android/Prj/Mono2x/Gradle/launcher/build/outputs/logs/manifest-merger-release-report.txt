@@ -5,11 +5,12 @@ INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\M
 INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 MERGED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:2:1-69:12
+MERGED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:2:1-36:12
 INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 	package
-		ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:70-114
+		ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:70-117
 		INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 		INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 	android:versionName
@@ -17,7 +18,7 @@ INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\M
 		ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 		INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:115-161
+		ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:118-164
 	android:versionCode
 		INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 		ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
@@ -25,7 +26,7 @@ INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\M
 	xmlns:android
 		ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:11-69
 	android:installLocation
-		ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:162-202
+		ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:165-205
 supports-screens
 ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:3:3-163
 	android:largeScreens
@@ -42,6 +43,8 @@ application
 ADDED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-83
 MERGED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:29:5-67:19
 MERGED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:29:5-67:19
+MERGED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:13:5-34:19
+MERGED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:13:5-34:19
 	android:extractNativeLibs
 		ADDED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:29:18-50
 	android:label
@@ -54,6 +57,8 @@ INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\M
 INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 MERGED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:8:5-10:41
 MERGED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:8:5-10:41
+MERGED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:5:5-7:41
+MERGED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:5:5-7:41
 INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 INJECTED from D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -76,6 +81,8 @@ ADDED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\
 		ADDED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:14:9-55
 uses-permission#android.permission.INTERNET
 ADDED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:17:5-67
+MERGED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:10:5-67
+MERGED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:10:5-67
 	android:name
 		ADDED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:17:22-64
 uses-feature#android.hardware.touchscreen
@@ -164,3 +171,51 @@ ADDED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\
 		ADDED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:66:13-47
 	android:name
 		ADDED from [:unityLibrary] D:\Unity\MagnitudeSprint\MagnitudeSprint\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:65:13-40
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:9:22-76
+uses-permission#com.google.android.gms.permission.AD_ID
+ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:11:22-76
+activity#com.unity3d.services.ads.adunit.AdUnitActivity
+ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:14:9-18:74
+	android:hardwareAccelerated
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:17:13-47
+	android:configChanges
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:16:13-170
+	android:theme
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:18:13-71
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:15:13-74
+activity#com.unity3d.services.ads.adunit.AdUnitTransparentActivity
+ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:19:9-23:86
+	android:hardwareAccelerated
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:22:13-47
+	android:configChanges
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:21:13-170
+	android:theme
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:23:13-83
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:20:13-85
+activity#com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity
+ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:24:9-28:86
+	android:hardwareAccelerated
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:27:13-48
+	android:configChanges
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:26:13-170
+	android:theme
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:28:13-83
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:25:13-93
+activity#com.unity3d.services.ads.adunit.AdUnitSoftwareActivity
+ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:29:9-33:74
+	android:hardwareAccelerated
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:32:13-48
+	android:configChanges
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:31:13-170
+	android:theme
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:33:13-71
+	android:name
+		ADDED from [:UnityAds:] C:\Users\Redmibook\.gradle\caches\transforms-2\files-2.1\6e396c89275ec6167b80267784f1713e\UnityAds\AndroidManifest.xml:30:13-82

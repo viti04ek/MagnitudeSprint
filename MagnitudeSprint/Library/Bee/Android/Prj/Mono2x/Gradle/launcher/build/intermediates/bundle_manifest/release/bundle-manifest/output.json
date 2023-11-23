@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "applicationId": "com.DefaultCompany.MagnitudeSprint",
+  "applicationId": "com.ViktorStoianovych.MagnitudeSprint",
   "variantType": "BASE_APK",
   "elements": [
     {
@@ -19,7 +19,7 @@
       },
       "path": "AndroidManifest.xml",
       "properties": {
-        "packageId": "com.DefaultCompany.MagnitudeSprint",
+        "packageId": "com.ViktorStoianovych.MagnitudeSprint",
         "split": "",
         "minSdkVersion": "22"
       }

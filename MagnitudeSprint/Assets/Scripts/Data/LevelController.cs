@@ -84,7 +84,7 @@ public class LevelController : MonoBehaviour
 
         Time.timeScale = 1;
 
-        BannerAds.BannerAd.ShowAd();
+        Invoke("ShowBannerAd", 1.1f);
     }
 
 
@@ -229,7 +229,7 @@ public class LevelController : MonoBehaviour
 
         UIController.Instance.PlayerLose();
 
-        BannerAds.BannerAd.ShowAd();
+        ShowBannerAd();
     }
 
 
@@ -256,7 +256,7 @@ public class LevelController : MonoBehaviour
         PlayerPrefs.SetInt("LastEnvironment", CurrentEnvironment);
         _isLvlComplete = true;
 
-        BannerAds.BannerAd.ShowAd();
+        ShowBannerAd();
 
         if (DataController.Instance.LevelsWithoutAds >= 3)
         {
@@ -278,6 +278,13 @@ public class LevelController : MonoBehaviour
     {
         DataController.Instance.GameData.LevelCounter++;
         DataController.Instance.LevelsWithoutAds++;
+        DataController.Instance.LevelsWithoutAds = 0;
         RewardedAds.RewardedAd.ShowAd();
+    }
+
+
+    public void ShowBannerAd()
+    {
+        BannerAds.BannerAd.ShowAd();
     }
 }
