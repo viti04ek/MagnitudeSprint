@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.SceneManagement;
 
 public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
@@ -71,9 +72,21 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
 
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
-        if (placementId.Equals(_adUnityID) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
+        if (placementId.Equals(_adUnityID) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED) && LevelController.Instance.GameStatement == GameStatement.GameNotStarted)
         {
-            // finish
+            DataController.Instance.GameData.CoinCounter += 250;
+            UIController.Instance.UpdateStartCoinCounter();
+        }
+
+        if (placementId.Equals(_adUnityID) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED) && LevelController.Instance.GameStatement == GameStatement.GameOver)
+        {
+            DataController.Instance.GameData.CoinCounter += LevelController.Instance.CoinCounter * 3;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            DataController.Instance.GameData.CoinCounter += LevelController.Instance.CoinCounter;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         LoadAd();

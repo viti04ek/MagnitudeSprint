@@ -154,4 +154,10 @@ public class UIController : MonoBehaviour
         PauseUI.SetActive(true);
         RestartButton.SetActive(false);
     }
+
+
+    public void UpdateStartCoinCounter()
+    {
+        StartCoinCounter.text = DataController.Instance.GameData.CoinCounter.ToString();
+    }
 }

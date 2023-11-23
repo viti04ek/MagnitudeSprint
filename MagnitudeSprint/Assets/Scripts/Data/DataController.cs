@@ -20,6 +20,8 @@ public class DataController : MonoBehaviour
     public Material PlayerMaterial;
     public GameObject PlayerHat;
 
+    public int LevelsWithoutAds = 1;
+
 
     private void Awake()
     {

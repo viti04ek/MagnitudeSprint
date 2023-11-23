@@ -34,6 +34,8 @@ public class LevelController : MonoBehaviour
 
     public GameObject HatSpawn;
 
+    public int AdsX = 1;
+
     private GameStatement _prevGameStatement;
     private bool _isLvlComplete = false;
 
@@ -81,6 +83,8 @@ public class LevelController : MonoBehaviour
             Instantiate(DataController.Instance.PlayerHat, HatSpawn.transform.position, HatSpawn.transform.rotation, HatSpawn.transform);
 
         Time.timeScale = 1;
+
+        BannerAds.BannerAd.ShowAd();
     }
 
 
@@ -141,6 +145,8 @@ public class LevelController : MonoBehaviour
 
         var player = FindObjectOfType<PlayerMovement>();
         player.enabled = true;
+
+        BannerAds.BannerAd.HideAd();
     }
 
 
@@ -222,6 +228,8 @@ public class LevelController : MonoBehaviour
         player.enabled = false;
 
         UIController.Instance.PlayerLose();
+
+        BannerAds.BannerAd.ShowAd();
     }
 
 
@@ -247,12 +255,29 @@ public class LevelController : MonoBehaviour
 
         PlayerPrefs.SetInt("LastEnvironment", CurrentEnvironment);
         _isLvlComplete = true;
+
+        BannerAds.BannerAd.ShowAd();
+
+        if (DataController.Instance.LevelsWithoutAds >= 3)
+        {
+            DataController.Instance.LevelsWithoutAds = 0;
+            InterstitialAds.InterstitialAd.ShowAd();
+        }
     }
 
 
-    public void ClaimAwards(int AdsX)
+    public void ClaimAwards()
     {
         DataController.Instance.GameData.LevelCounter++;
-        DataController.Instance.GameData.CoinCounter += CoinCounter * AdsX;
+        DataController.Instance.GameData.CoinCounter += CoinCounter;
+        DataController.Instance.LevelsWithoutAds++;
+    }
+
+
+    public void ClaimAdsAwards()
+    {
+        DataController.Instance.GameData.LevelCounter++;
+        DataController.Instance.LevelsWithoutAds++;
+        RewardedAds.RewardedAd.ShowAd();
     }
 }
