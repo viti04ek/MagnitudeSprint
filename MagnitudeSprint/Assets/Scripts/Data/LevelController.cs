@@ -84,7 +84,7 @@ public class LevelController : MonoBehaviour
 
         Time.timeScale = 1;
 
-        Invoke("ShowBannerAd", 1.1f);
+        ShowBannerAd();
     }
 
 
@@ -96,7 +96,7 @@ public class LevelController : MonoBehaviour
         }
         else if (GameStatement == GameStatement.GameOn)
         {
-
+            
         }
         else if (GameStatement == GameStatement.FinalPart)
         {
@@ -146,7 +146,7 @@ public class LevelController : MonoBehaviour
         var player = FindObjectOfType<PlayerMovement>();
         player.enabled = true;
 
-        BannerAds.BannerAd.HideAd();
+        Invoke("HideBannerAd", 2f);
     }
 
 
@@ -193,6 +193,7 @@ public class LevelController : MonoBehaviour
         _prevGameStatement = GameStatement;
         GameStatement = GameStatement.GamePaused;
         UIController.Instance.Pause();
+        ShowBannerAd();
         Time.timeScale = 0;
     }
 
@@ -202,6 +203,7 @@ public class LevelController : MonoBehaviour
         GameStatement = _prevGameStatement;
         UIController.Instance.UnPause();
         Time.timeScale = 1;
+        BannerAds.BannerAd.HideAd();
     }
 
 
@@ -286,5 +288,11 @@ public class LevelController : MonoBehaviour
     public void ShowBannerAd()
     {
         BannerAds.BannerAd.ShowAd();
+    }
+
+
+    public void HideBannerAd()
+    {
+        BannerAds.BannerAd.HideAd();
     }
 }

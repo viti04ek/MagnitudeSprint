@@ -44,7 +44,7 @@ public class BannerAds : MonoBehaviour
 
     private void OnBannerLoaded()
     {
-        //ShowAd();
+        ShowAd();
     }
 
 

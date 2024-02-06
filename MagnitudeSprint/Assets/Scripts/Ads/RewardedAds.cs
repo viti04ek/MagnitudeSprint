@@ -78,14 +78,17 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
             UIController.Instance.UpdateStartCoinCounter();
         }
 
-        if (placementId.Equals(_adUnityID) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED) && LevelController.Instance.GameStatement == GameStatement.GameOver)
+        if (LevelController.Instance.GameStatement == GameStatement.GameOver)
         {
-            DataController.Instance.GameData.CoinCounter += LevelController.Instance.CoinCounter * 3;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else
-        {
-            DataController.Instance.GameData.CoinCounter += LevelController.Instance.CoinCounter;
+            if (placementId.Equals(_adUnityID) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
+            {
+                DataController.Instance.GameData.CoinCounter += LevelController.Instance.CoinCounter * 3;
+            }
+            else
+            {
+                DataController.Instance.GameData.CoinCounter += LevelController.Instance.CoinCounter;
+            }
+            UIController.Instance.ShowLoadingScreen();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
